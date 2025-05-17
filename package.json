@@ -2,6 +2,7 @@
   "name": "agreeable-ascension",
   "type": "module",
   "version": "0.0.1",
+  "author": "Rodrigo Celis gh:<Congrak>, Andres Medina gh:<andresmdtr>",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.13"
+    "astro": "5.7.13"
   }
 }
