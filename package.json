@@ -2,7 +2,7 @@
   "name": "agreeable-ascension",
   "type": "module",
   "version": "0.0.1",
-  "author": "Rodrigo Celis gh:<Congrak>, Andres Medina gh:<andresmdtr>",
+  "author": "Rodrigo Celis gh: <Congrak>",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -10,6 +10,23 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "5.7.13"
-  }
+    "@astrojs/react": "4.2.7",
+    "@astrojs/tailwind": "6.0.2",
+    "@tailwindcss/vite": "4.1.7",
+    "@types/react": "19.1.4",
+    "@types/react-dom": "19.1.5",
+    "astro": "5.7.13",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.21",
+    "daisyui": "5.0.35",
+    "postcss": "8.5.3",
+    "tailwindcss": "3.4.3"
+  },
+  "description": "```sh\r npm create astro@latest -- --template basics\r ```",
+  "main": "index.js",
+  "keywords": [],
+  "license": "ISC"
 }

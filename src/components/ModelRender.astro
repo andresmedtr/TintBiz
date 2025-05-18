@@ -1,0 +1,23 @@
+---
+const initial = "house"; // default view
+---
+
+<model-viewer
+  id="viewer"
+  src={initial === "house" ? "/mazda_cx-5_2020/scene.gltf" : "/mercedes_g_wagon/scene.gltf"}
+  alt="3D Model"
+  auto-rotate
+  camera-controls
+  ar
+  style="width: 100%; height: auto;"
+></model-viewer>
+
+<script type="module">
+  const viewer = document.getElementById("viewer");
+
+  window.addEventListener("model-change", (e) => {
+    viewer.src = e.detail === "car"
+      ? "/mazda_cx-5_2020/scene.gltf"
+      : "/mercedes_g_wagon/scene.gltf";
+  });
+</script>
