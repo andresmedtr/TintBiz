@@ -1,23 +1,30 @@
----
-const initial = "house"; // default view
+--- 
+const initial = "car"; // default view
+
 ---
 
 <model-viewer
   id="viewer"
-  src={initial === "house" ? "/mazda_cx-5_2020/scene.gltf" : "/mercedes_g_wagon/scene.gltf"}
+  src="/mercedes_g_wagon/scene.gltf"
   alt="3D Model"
   auto-rotate
   camera-controls
   ar
-  style="width: 100%; height: auto;"
+  class="w-full h-[500px]"
 ></model-viewer>
+<!-- <button id="tint-button" class="btn mt-4">Increase Tint</button> -->
 
 <script type="module">
   const viewer = document.getElementById("viewer");
 
+  // Handle toggle between car and house
+
   window.addEventListener("model-change", (e) => {
-    viewer.src = e.detail === "car"
-      ? "/mazda_cx-5_2020/scene.gltf"
-      : "/mercedes_g_wagon/scene.gltf";
+    const model = e.detail;
+    viewer.src =
+      model === "car"
+        ? "/mercedes_g_wagon/scene.gltf"
+        : "/mazda_cx-5_2020/scene.gltf";
   });
+
 </script>
