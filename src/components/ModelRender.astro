@@ -1,6 +1,10 @@
 --- 
-const initial = "car"; // default view
-
+const tintButtons = [
+  {id: "tint-25", title: "5%", content: ["Increase 5%", "Protect from sun", "Keeps you cool"], alpha: 0.25},
+  {id: "tint-50", title: "25%", content: ["Increase 25%", "Protect from sun", "Keeps you cool"], alpha: 0.5},
+  {id: "tint-75", title: "50%", content: ["Increase 50%", "Protect from sun", "Keeps you cool"], alpha: 0.75},
+  {id: "tint-100", title: "100%", content: ["Increase 100%", "Protect from sun", "Keeps you cool"], alpha: 1}
+  ]
 ---
 
 <model-viewer
@@ -12,10 +16,63 @@ const initial = "car"; // default view
   ar
   class="w-full h-[500px]"
 ></model-viewer>
-<!-- <button id="tint-button" class="btn mt-4">Increase Tint</button> -->
+<div class="flex flex-wrap gap-4 mt-4 text-center justify-center">
+  {tintButtons.map((button, index) => (
+    <div class="">
+      <div class="text-center">
+        <button class="btn" id={`${button.id}`}>{button.title}</button>
+      </div>
+      <div class="mt-2 text-sm text-gray-600">
+        {button.content.map((benefits) => (
+          <p>{benefits}</p>
+        ))}
+      </div>
+    </div>))}
+</div>
 
+
+<!-- JS scripts to Interact with buttons and switch toggle -->
 <script type="module">
-  const viewer = document.getElementById("viewer");
+  const viewer = document.getElementById("viewer"); //3D Model
+
+  viewer.addEventListener('load', () => {
+    const materials = viewer.model.materials;
+    const tintMat = materials.find(mat => mat.name === 'Car_Window_Tint'); //Assigning the car object materials to a variable which is an object
+    let tintLevel = 0.2
+
+    if (!tintMat) {
+      console.log("tintMat not found"); // Look for errors, maybe we can add a conditional for rendering errors not to display the button to avoid issues
+      return
+    }    else  {
+
+      tintMat.alphaMode = 'BLEND';
+          const tintMap = {
+      "tint-25": 0.25,
+      "tint-50": 0.5,
+      "tint-75": 0.75,
+      "tint-100": 1.0
+    };
+     // Attach event listeners to all buttons
+    Object.entries(tintMap).forEach(([id, alpha]) => {
+      console.log(alpha, id)
+      const btn = document.getElementById(id);
+      if (btn) {
+        btn.addEventListener("click", () => {
+          tintMat.pbrMetallicRoughness.setBaseColorFactor([0, 0, 0, alpha]);
+          console.log(`🕶️ Tint updated to ${Math.round(alpha * 100)}%`);
+        });
+      }
+    });
+  }})
+      
+    
+    //  document.getElementById('tint-button').addEventListener('click', () => {
+    //   // Increase tint (max 1.0)
+    //   tintLevel = Math.min(1.0, tintLevel + 0.1);
+    //   tintMat.pbrMetallicRoughness.setBaseColorFactor([0, 0, 0, tintLevel]); // Setting tint level based on buttons
+
+    //   console.log(`🕶️ Tint level set to: ${tintLevel}`);
+    // });
 
   // Handle toggle between car and house
 
@@ -24,7 +81,7 @@ const initial = "car"; // default view
     viewer.src =
       model === "car"
         ? "/mercedes_g_wagon/scene.gltf"
-        : "/mazda_cx-5_2020/scene.gltf";
+        : "/mazda_cx-5_2020/tintable_mazda.glb";
   });
 
 </script>
