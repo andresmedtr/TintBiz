@@ -27,6 +27,7 @@ export const TranslateProvider = ({ children }: { children: React.ReactNode }) =
         loadLocaleData(locale);
     }, [locale]);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const changeLocale = (newLocale: string) => {
         setLocale(newLocale);
     };
