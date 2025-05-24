@@ -9,10 +9,13 @@ const tintButtons = [
 
 <model-viewer
   id="viewer"
-  src="/mercedes_g_wagon/scene.gltf"
+  src="/house/house.glb"
   alt="3D Model"
   auto-rotate
   camera-controls
+  camera-orbit="0deg 90deg 0.5m"
+  min-camera-orbit="auto 90deg auto"
+  max-camera-orbit="auto 90deg auto"
   ar
   class="w-full h-[500px]"
 ></model-viewer>
@@ -37,8 +40,9 @@ const tintButtons = [
 
   viewer.addEventListener('load', () => {
     const materials = viewer.model.materials;
-    const tintMat = materials.find(mat => mat.name === 'Car_Window_Tint'); //Assigning the car object materials to a variable which is an object
-    let tintLevel = 0.2
+    let tintMat = materials.find(
+      mat => ["Car_Glasses", "House_Glasses"].includes(mat.name)
+    );
 
     if (!tintMat) {
       console.log("tintMat not found"); // Look for errors, maybe we can add a conditional for rendering errors not to display the button to avoid issues
@@ -80,8 +84,8 @@ const tintButtons = [
     const model = e.detail;
     viewer.src =
       model === "car"
-        ? "/mercedes_g_wagon/scene.gltf"
-        : "/mazda_cx-5_2020/tintable_mazda.glb";
+        ? "/house/house.glb"
+        : "/mercedes_g_wagon/mercedes.glb";
   });
 
 </script>
