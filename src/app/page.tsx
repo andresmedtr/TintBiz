@@ -11,13 +11,13 @@ import {
 import { AmexCardIcon } from "icondex";
 // import styles from "./page.module.css";
 import { FormattedMessage } from "react-intl";
+import QuoteForm from "./components/QuoteForm";
 
 export default function Home() {
   return (
     <div>
       <FormattedMessage id="test" description="esto es el testeo" />
       <div className="">
-        hola
         <Accordion>
           <AccordionSummary
             expandIcon={<AmexCardIcon height={100} width={120} />}
@@ -52,6 +52,7 @@ export default function Home() {
             <Button>Agree</Button>
           </AccordionActions>
         </Accordion>
+        <QuoteForm />
       </div>
     </div>
   );
