@@ -5,7 +5,8 @@
   "author": "Rodrigo Celis <git_user: Congrak> && Andres Medina <git_user: andresmedtr>",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "generate-models": "bash ./download-models.sh",
+    "build": "npm run generate-models && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -19,7 +20,7 @@
     "react-dom": "19.0.0",
     "react-intl": "7.1.11"
   },
-  "devDependencies": {
+  "devDependencies": { 
     "@eslint/eslintrc": "3",
     "@types/node": "20",
     "@types/react": "19",
