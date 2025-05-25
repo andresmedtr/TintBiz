@@ -17,6 +17,7 @@ export default function Home() {
     <div>
       <FormattedMessage id="test" description="esto es el testeo" />
       <div>
+        hola
         <Accordion>
           <AccordionSummary
             expandIcon={<AmexCardIcon height={100} width={120} />}
