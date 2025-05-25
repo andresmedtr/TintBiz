@@ -8,7 +8,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import { AmexCardIcon } from  "icondex"
+import { AmexCardIcon } from "icondex";
 // import styles from "./page.module.css";
 import { FormattedMessage } from "react-intl";
 
@@ -16,14 +16,13 @@ export default function Home() {
   return (
     <div>
       <FormattedMessage id="test" description="esto es el testeo" />
-      <div>
+      <div className="">
         hola
         <Accordion>
           <AccordionSummary
             expandIcon={<AmexCardIcon height={100} width={120} />}
             aria-controls="panel1-content"
-            id="panel1-header"
-          >
+            id="panel1-header">
             <Typography component="span">Accordion 1</Typography>
           </AccordionSummary>
           <AccordionDetails>
