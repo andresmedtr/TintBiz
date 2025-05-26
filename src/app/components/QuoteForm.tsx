@@ -4,8 +4,18 @@ import { FormattedMessage } from "react-intl";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 
+type FormFields = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
 const QuoteForm = () => {
-  const inputFields = [
+  const inputFields: Array<{
+    id: keyof Omit<FormFields, "message">;
+    label: string;
+  }> = [
     { id: "name", label: "Name" },
     { id: "email", label: "Email" },
     { id: "phone", label: "Phone Number" },
@@ -63,7 +73,7 @@ const QuoteForm = () => {
                 key={field.id}
                 name={field.id}
                 label={field.label}
-                value={(form as any)[field.id]}
+                value={form[field.id]}
                 variant="standard"
                 onChange={handleChange}
                 required
