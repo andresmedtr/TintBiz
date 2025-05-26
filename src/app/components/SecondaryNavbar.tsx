@@ -10,7 +10,6 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
-import { FormattedMessage } from "react-intl";
 
 const pages = ["Choose Your Tint", "Benefits", "About us"];
 
