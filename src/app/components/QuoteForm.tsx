@@ -1,8 +1,9 @@
 "use client";
-import { TextField, Container, Button, Box } from "@mui/material";
+import { TextField, Container, Button, Box, Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import SecondaryNavbar from "./SecondaryNavbar";
 
 type FormFields = {
   name: string;
@@ -60,11 +61,21 @@ const QuoteForm = () => {
 
   return (
     <div>
-      <h1 className="ms-6 text-red-500 text-4xl mb-6">
-        <FormattedMessage id="contactus.title" description="contact us" />
-      </h1>
-
+      <SecondaryNavbar />
       <Container fixed className="p-6 rounded-md">
+        <Box
+          id="contact-us"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // Adjust height as needed
+            textAlign: "center",
+          }}>
+          <Typography variant="h3" sx={{ color: "#111111" }}>
+            <FormattedMessage id="contactus.title" />
+          </Typography>
+        </Box>
         {/* Inputs stacked vertically */}
         <form onSubmit={sendEmail}>
           <Box display="flex" flexDirection="column" gap={2}>
