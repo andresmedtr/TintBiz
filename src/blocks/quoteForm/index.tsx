@@ -1,67 +1,41 @@
 "use client";
+
 import { TextField, Container, Button, Box, Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
-import emailjs from "emailjs-com";
 import { useState } from "react";
-import SecondaryNavbar from "./SecondaryNavbar";
+import { EmailData } from "@/types/globalTypes";
+import { sendEmail } from "@/service/emailjs";
+import { inputFields } from "@/constants";
 
-type FormFields = {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-};
-
-const QuoteForm = () => {
-  const inputFields: Array<{
-    id: keyof Omit<FormFields, "message">;
-    label: string;
-  }> = [
-    { id: "name", label: "Name" },
-    { id: "email", label: "Email" },
-    { id: "phone", label: "Phone Number" },
-  ];
-  const [form, setForm] = useState({
+export const QuoteForm = () => {
+  const [form, setForm] = useState<EmailData>({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .send(
-        "service_k0rtwpt",
-        "template_vq0kb6v",
-        {
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          message: form.message,
-        },
-        "nNDoDIArBqtTx2U9Y"
-      )
-      .then(
-        () => {
-          alert("Message sent successfully");
-          setForm({ name: "", email: "", phone: "", message: "" });
-        },
-        (error) => {
-          alert("Failed to send message.");
-          console.error(error);
-        }
-      );
+    try {
+      const res = await sendEmail(form);
+      if (res.status === 200) {
+      console.info(res.status, 'Message sent successfully!')
+      setForm({ name: "", email: "", phone: "", message: "" });
+    }
+    } catch (error) {
+      console.error(error, 'Failed to send message.');
+    }
   };
-
   return (
     <div>
-      <SecondaryNavbar />
       <Container fixed className="p-6 rounded-md">
         <Box
           id="contact-us"
@@ -71,20 +45,21 @@ const QuoteForm = () => {
             alignItems: "center",
             // Adjust height as needed
             textAlign: "center",
-          }}>
+          }}
+        >
           <Typography variant="h3" sx={{ color: "#111111" }}>
             <FormattedMessage id="contactus.title" />
           </Typography>
         </Box>
         {/* Inputs stacked vertically */}
-        <form onSubmit={sendEmail}>
+        <form onSubmit={handleSubmit}>
           <Box display="flex" flexDirection="column" gap={2}>
             {inputFields.map((field) => (
               <TextField
                 key={field.id}
                 name={field.id}
                 label={field.label}
-                value={form[field.id]}
+                value={form[field.id as keyof EmailData]}
                 variant="standard"
                 onChange={handleChange}
                 required
@@ -111,5 +86,3 @@ const QuoteForm = () => {
     </div>
   );
 };
-
-export default QuoteForm;

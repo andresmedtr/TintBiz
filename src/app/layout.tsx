@@ -12,6 +12,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "TintsAtHome",
   description: "Tints to the comfortness of your home",
+  authors: [
+    { name: "Rodrigo Celis", url: "https://github.com/Congrak" },
+    { name: "Andres Medina", url: "https://github.com/andresmedtr" },
+  ],
+
 };
 
 export default function RootLayout({

@@ -1,4 +1,6 @@
-import * as React from "react";
+"use client"
+
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,7 +15,7 @@ import Image from "next/image";
 
 const pages = ["Choose Your Tint", "Benefits", "About us"];
 
-function SecondaryNavbar() {
+export const SecondaryNavbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -149,4 +151,4 @@ function SecondaryNavbar() {
     </AppBar>
   );
 }
-export default SecondaryNavbar;
+
