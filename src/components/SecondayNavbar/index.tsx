@@ -39,28 +39,12 @@ export const SecondaryNavbar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* LOGO (left side desktop) */}
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#contact-us"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "#111111", // ⚫
-              textDecoration: "none",
-            }}>
             <Image
               src="/logo/logo1.png"
               alt="Tints@Home Logo"
               width={60}
               height={60}
             />
-          </Typography>
-
           {/* NAV BUTTONS (desktop only) */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -83,28 +67,12 @@ export const SecondaryNavbar = () => {
           </Box>
 
           {/* LOGO (mobile) */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#contact-us"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "#111111", // ⚫
-              textDecoration: "none",
-            }}>
             <Image
               src="/logo/logo1.png"
               alt="Tints@Home Logo"
               width={60}
               height={60}
             />
-          </Typography>
 
           {/* BURGER MENU (mobile only) */}
           <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>

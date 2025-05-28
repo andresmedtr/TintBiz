@@ -1,20 +1,18 @@
-// components/ModelViewer.tsx
 "use client";
 
 import { ModelViewerProps } from "@/types/globalTypes";
-import "@google/model-viewer";
+import "@google/model-viewer/lib/model-viewer";
 
-export const ModelViewer = ({
+function ModelViewer({
   src,
   alt = "3D model",
   autoRotate = true,
   cameraControls = true,
   ar = false,
   className = "",
-  width = "100%",
+  width = "100px",
   height = "100%",
-
-}: ModelViewerProps) => {
+}: ModelViewerProps) {
   return (
     <model-viewer
       src={src}
@@ -26,5 +24,6 @@ export const ModelViewer = ({
       class={className}
     />
   );
-};
+}
 
+export default ModelViewer;

@@ -5,7 +5,8 @@
   "author": "Rodrigo Celis <git_user: Congrak> && Andres Medina <git_user: andresmedtr>",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "generate-models": "bash ./download-models.sh",
+    "build": "npm run generate-models && next build",
     "start": "next start",
     "lint": "next lint"
   },
