@@ -5,13 +5,15 @@
   "author": "Rodrigo Celis <git_user: Congrak> && Andres Medina <git_user: andresmedtr>",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "generate-models": "bash ./download-models.sh",
+    "build": "npm run generate-models && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@google/model-viewer": "^4.1.0",
     "@mui/icons-material": "^7.1.0",
     "@mui/material": "^7.1.0",
     "emailjs-com": "^3.2.0",
