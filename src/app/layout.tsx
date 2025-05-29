@@ -27,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} flex flex-col row items-center`}>
+      <body className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2]`}>
         <TranslateProvider>
           <Navbar />
-          <div className="max-w-[2000px] w-full border">{children}</div>
+          <div className="max-w-[2000px] w-full">{children}</div>
         </TranslateProvider>
       </body>
     </html>
