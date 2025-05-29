@@ -1,4 +1,7 @@
 {
-  "test": "espanol",
-  "contactus.title": "CONTACTANOS"
+  "navbar.title.home": "Inicio",
+  "navbar.title.benefits": "Beneficio",
+  "navbar.title.about": "Sobre Nosotros",
+  "navbar.title.Contact": "Contactanos"
+
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const Model3D = () => {
   return (
-    <div className="w-[100%] h-[fit-content] flex">
+    <div className="w-full h-[fit-content] flex">
       <div className="">
         <Image
           src="/logo/logo1.png"
