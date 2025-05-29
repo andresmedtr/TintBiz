@@ -1,5 +1,6 @@
-import { Model3D } from "@/blocks/model3D";
-import { QuoteForm }from "@/blocks/quoteForm";
+import Model3D from "@/blocks/model3D";
+import QuoteForm from "@/blocks/quoteForm";
+import { TintAccordion } from "@/components/accordion";
 import { SecondaryNavbar } from "@/components/SecondayNavbar";
 
 export default function Home() {
