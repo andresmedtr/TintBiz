@@ -1,5 +1,5 @@
 import Model3D from "@/blocks/model3D";
-import QuoteForm from "@/blocks/quoteForm";
+import ContactUs from "@/blocks/contactUs";
 import { TintAccordion } from "@/components/accordion";
 import { SecondaryNavbar } from "@/components/SecondayNavbar";
 
@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Model3D />
       <SecondaryNavbar />
-      <QuoteForm />
+      <ContactUs />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CssBaseline } from "@mui/material";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { TranslateProvider } from "@/provider/translate";
@@ -16,7 +17,6 @@ export const metadata: Metadata = {
     { name: "Rodrigo Celis", url: "https://github.com/Congrak" },
     { name: "Andres Medina", url: "https://github.com/andresmedtr" },
   ],
-
 };
 
 export default function RootLayout({
@@ -27,8 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className}`}>
+        <CssBaseline />
         <TranslateProvider>
-          <div style={{ maxWidth: "2000px" }}>{children}</div>
+          <div style={{ maxWidth: "2000px", width: "100%", margin: "0 auto" }}>
+            {children}
+          </div>
         </TranslateProvider>
       </body>
     </html>

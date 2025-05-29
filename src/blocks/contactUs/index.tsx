@@ -1,44 +1,13 @@
-"use client";
-
-import {
-  Box,
-  Container,
-  Typography,
-  Paper,
-  TextField,
-  Button,
-  MenuItem,
-} from "@mui/material";
+import { Box, Container, Typography, Paper, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import { QuoteForm } from "@/components/quoteForm";
 import { Phone, Mail, LocationOn } from "@mui/icons-material";
-import { useState } from "react";
 
-export default function QuoteForm({
+export default function ContactUs({
   modelType = "car",
 }: {
   modelType?: "car" | "house";
 }) {
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    service: "Automotive Tinting",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(form);
-    // You can plug in your email/send logic here
-  };
-
   return (
     <Box
       component="section"
@@ -58,9 +27,9 @@ export default function QuoteForm({
           </Typography>
         </Box>
 
-        <Grid container spacing={4}>
-          {/* Left side: contact info */}
-          <Grid item xs={12} md={6}>
+        {/* Grid layout begins here */}
+        <Grid container spacing={4} alignItems="flex-start">
+          <Grid item xs={12} md={5} sx={{ border: "1px solid red" }}>
             <Typography
               variant="h6"
               fontWeight="bold"
@@ -113,8 +82,8 @@ export default function QuoteForm({
               <Typography sx={{ color: "#333333" }}>Sunday: Closed</Typography>
             </Box>
           </Grid>
-
-          {/* Right side: form */}
+          {/* Right side: form inside white paper block */}
+          <QuoteForm />
         </Grid>
       </Container>
     </Box>

@@ -10,18 +10,4 @@
 
 html,
 body {
-  background-color: #fff;
-  background-image: radial-gradient(
-      circle at 1px 1px,
-      rgba(0, 0, 0, 0.05) 1px,
-      transparent 0
-    ),
-    radial-gradient(
-      circle at 16px 8px,
-      rgba(195, 95, 95, 0.05) 1px,
-      transparent 0
-    ),
-    linear-gradient(to right, rgba(0, 0, 0, 0.02), rgba(255, 0, 0, 0.01));
-  background-size: 49px 100px;
-  background-position: 0 0, 16px 14px, 0 0;
 }
