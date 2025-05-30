@@ -11,3 +11,11 @@
 html,
 body {
 }
+
+.paragraph-primary {
+  color: #333333;
+}
+
+.title-primary {
+  color: #111111;
+}

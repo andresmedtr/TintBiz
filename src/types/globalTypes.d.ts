@@ -1,7 +1,9 @@
-export interface EmailData {
-  name: string;
+export interface QuoteFormFields {
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
+  service: string;
   message: string;
 }
 

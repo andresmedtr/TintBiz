@@ -8,10 +8,10 @@ export default function Model3D() {
   return (
     <div className="w-full h-[fit-content]">
       <div className="w-full h-fit text-center py-[50px]">
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-5xl font-bold title-primary">
           <FormattedMessage id="block.model3d.title" />
         </h1>
-        <p>
+        <p className="paragraph-primary">
           <FormattedMessage id="block.model3d.parapgrah" />
         </p>
       </div>
@@ -21,14 +21,14 @@ export default function Model3D() {
             <TintAccordion />
           </div>
           <div>
-            <ModelViewer
+            {/* <ModelViewer
               src="https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb"
               alt="Un modelo 3D"
               auto-rotate={true}
               camera-controls={true}
               width="500px"
               height="500px"
-            />
+            /> */}
           </div>
         </div>
       </div>
