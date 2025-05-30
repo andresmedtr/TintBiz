@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     { name: "Rodrigo Celis", url: "https://github.com/Congrak" },
     { name: "Andres Medina", url: "https://github.com/andresmedtr" },
   ],
-
 };
 
 export default function RootLayout({
@@ -27,7 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2]`}>
+      <body
+        className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2]`}>
         <TranslateProvider>
           <Navbar />
           <div className="max-w-[2000px] w-full">{children}</div>

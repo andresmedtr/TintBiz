@@ -1,11 +1,11 @@
-import { Model3D } from "@/blocks/model3D";
-import { QuoteForm }from "@/blocks/quoteForm";
+import Model3D from "@/blocks/model3D";
+import ContactUs from "@/blocks/contactUs";
 
 export default function Home() {
   return (
     <main>
       <Model3D />
-      <QuoteForm />
+      <ContactUs />
     </main>
   );
 }

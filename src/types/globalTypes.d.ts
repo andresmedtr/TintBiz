@@ -1,13 +1,15 @@
-export interface EmailData {
-    name: string;
-    email: string;
-    phone: string;
-    message: string;
+export interface QuoteFormFields {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
 }
 
-export interface InputFieldsProps { 
-    id: string;
-    label: string
+export interface InputFieldsProps {
+  id: string;
+  label: string;
 }
 
 export interface ModelViewerProps {
@@ -18,6 +20,5 @@ export interface ModelViewerProps {
   ar?: boolean;
   className?: string;
   width: string;
-  height: string
-
+  height: string;
 }

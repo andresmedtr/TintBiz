@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+/* Color Role	Color Code	Usage
+🔴 Primary Red	#E52323	Call-to-action buttons, highlights, phone numbers, key accents
+⚫ Deep Black	#111111	Backgrounds, main headers, nav bar, footers
+⚪ Pure White	#FFFFFF	Main text background, contrast areas, clean space
+🔘 Light Gray	#F2F2F2	Secondary backgrounds, cards, pricing boxes
+🔲 Dark Gray	#333333	Subtitles, secondary text
+🔺 Accent Red Dark	#B30000	Hover effects, button presses */
+
+html,
+body {
+}
+
+.paragraph-primary {
+  color: #333333;
+}
+
+.title-primary {
+  color: #111111;
+}
