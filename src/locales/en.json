@@ -8,6 +8,18 @@
   "block.model3d.square.title":"Professional Window Tinting",
   "block.model3d.square.paragrah":"Transform your vehicle with our premium tinting solutions. Enjoy enhanced privacy, UV protection, and energy efficiency with our professional-grade films.",
   "block.model3d.square.accordion": "Choose Your Tint Level",
-  "block.model3d.square.button": "Get Your Quote Today"
+  "block.model3d.square.button": "Get Your Quote Today",
+  "block.model3d.square.accordion.option.1.name": "No Tint",
+  "block.model3d.square.accordion.option.1.description": "Clear glass with no tinting",
+  "block.model3d.square.accordion.option.2.name": "70% light Tint",
+  "block.model3d.square.accordion.option.2.description": "Subtle tinting for basic UV protection",
+  "block.model3d.square.accordion.option.3.name": "43% Medium Tint",
+  "block.model3d.square.accordion.option.3.description": "Balanced privacy and visibility",
+  "block.model3d.square.accordion.option.4.name": "35% Dark Tint",
+  "block.model3d.square.accordion.option.4.description": "Enhanced privacy and heat reduction",
+  "block.model3d.square.accordion.option.5.name": "20% Limo Tint",
+  "block.model3d.square.accordion.option.5.description": "Maximum privacy and protection",
+  "block.model3d.square.accordion.option.6.name": "5% Complete Tint",
+  "block.model3d.square.accordion.option.6.description": "Ultra-dark film for ultimate privacy and light reduction"
 
 }

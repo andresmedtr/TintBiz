@@ -8,5 +8,17 @@
   "block.model3d.square.title": "Polarizado Profesional de Vidrios",
   "block.model3d.square.paragrah": "Transforma tu vehículo con nuestras soluciones premium de polarizado. Disfruta de mayor privacidad, protección UV y eficiencia energética con nuestras láminas de calidad profesional.",
   "block.model3d.square.accordion": "Elige tu Nivel de Polarizado",
-  "block.model3d.square.button": "Solicita tu Cotización Hoy"
+  "block.model3d.square.button": "Solicita tu Cotización Hoy",
+  "block.model3d.square.accordion.option.1.name": "Sin Polarizado",
+  "block.model3d.square.accordion.option.1.description": "Vidrio claro sin ningún tipo de polarizado",
+  "block.model3d.square.accordion.option.2.name": "70% Polarizado Claro",
+  "block.model3d.square.accordion.option.2.description": "Polarizado sutil para protección básica contra los rayos UV",
+  "block.model3d.square.accordion.option.3.name": "43% Polarizado Medio",
+  "block.model3d.square.accordion.option.3.description": "Equilibrio entre privacidad y visibilidad",
+  "block.model3d.square.accordion.option.4.name": "35% Polarizado Oscuro",
+  "block.model3d.square.accordion.option.4.description": "Privacidad mejorada y reducción del calor",
+  "block.model3d.square.accordion.option.5.name": "20% Polarizado Limo",
+  "block.model3d.square.accordion.option.5.description": "Máxima privacidad y protección",
+  "block.model3d.square.accordion.option.6.name": "5% Polarizado Completo",
+  "block.model3d.square.accordion.option.6.description": "Lámina ultraoscura para privacidad total y mínima entrada de luz"
 }

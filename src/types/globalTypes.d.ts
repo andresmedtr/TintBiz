@@ -21,3 +21,14 @@ export interface ModelViewerProps {
   height: string
 
 }
+
+export interface SwitchContextType {
+  isActive: boolean;
+  toggle: () => void;
+}
+
+export interface TintLevelProps {
+  name: string;
+  description: string;
+  tone: string;
+}

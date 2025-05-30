@@ -1,7 +1,7 @@
 import { FormControlLabel, styled, Switch, SwitchProps } from "@mui/material";
 import DriveEtaOutlinedIcon from "@mui/icons-material/DriveEtaOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import { useState } from "react";
+import { useSwitch } from "@/hooks/useToggle";
 
 const IOSSwitch = styled((props: SwitchProps) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -64,25 +64,21 @@ const IOSSwitch = styled((props: SwitchProps) => (
 }));
 
 export const SwitchButton = () => {
-  const [switchActive, setSwitchActive] = useState<boolean>(true);
-
-  const handleToggle = () => {
-    setSwitchActive((prev) => !prev);
-  };
+  const { isActive, toggle } = useSwitch();
 
   return (
     <div className="w-fit h-full flex flex-row items-center">
       <HomeOutlinedIcon
         className={`w-[24px] h-[24px] transition-all duration-500 ease-in-out ${
-          switchActive ? "text-white" : "text-[#E52323]"
+          isActive ? "text-white" : "text-[#E52323]"
         }`}
       />
       <FormControlLabel
         control={
           <IOSSwitch
             sx={{ m: 1 }}
-            checked={switchActive}
-            onChange={handleToggle}
+            checked={isActive}
+            onChange={toggle}
           />
         }
         label=""
@@ -90,7 +86,7 @@ export const SwitchButton = () => {
       />
       <DriveEtaOutlinedIcon
         className={`w-[24px] h-[24px] transition-all duration-500 ease-in-out ${
-          !switchActive ? "text-white" : "text-[#E52323]"
+          !isActive ? "text-white" : "text-[#E52323]"
         }`}
       />
     </div>

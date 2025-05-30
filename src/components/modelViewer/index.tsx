@@ -22,6 +22,10 @@ function ModelViewer({
       ar={ar}
       style={{ width, height }}
       class={className}
+      disable-zoom
+      camera-orbit="0deg 90deg auto"
+      min-camera-orbit="auto 90deg auto"
+      max-camera-orbit="auto 90deg auto"
     />
   );
 }
