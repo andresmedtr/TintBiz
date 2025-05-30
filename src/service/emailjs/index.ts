@@ -1,12 +1,13 @@
-import { EmailData } from "@/types/globalTypes";
+import { QuoteFormFields } from "@/types/globalTypes";
 import emailjs from "emailjs-com";
 
-export const sendEmail = async (data: EmailData) => {
+export const sendEmail = async (data: QuoteFormFields) => {
   const templateParams: Record<string, string> = {
-    name: data.name,
+    name: data.firstName + " " + data.lastName,
     email: data.email,
     phone: data.phone,
     message: data.message,
+    service: data.service,
   };
 
   return emailjs.send(

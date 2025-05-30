@@ -11,10 +11,10 @@ export const Model3D = () => {
   return (
     <div className="w-full h-[fit-content]">
       <div className="w-full h-fit text-center py-[50px]">
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-5xl font-bold title-primary">
           <FormattedMessage id="block.model3d.title" />
         </h1>
-        <p>
+        <p className="paragraph-primary">
           <FormattedMessage id="block.model3d.parapgrah" />
         </p>
       </div>
@@ -43,4 +43,4 @@ export const Model3D = () => {
       </div>
     </div>
   );
-};
+}
