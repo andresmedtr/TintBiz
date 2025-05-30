@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { TranslateProvider } from "@/provider/translate";
 import { Navbar } from "@/components/navbar";
+import { SwitchProvider } from "@/provider/switch";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -29,8 +30,10 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2]`}>
         <TranslateProvider>
-          <Navbar />
-          <div className="max-w-[2000px] w-full">{children}</div>
+          <SwitchProvider>
+            <Navbar />
+            <div className="max-w-[2000px] w-full">{children}</div>
+          </SwitchProvider>
         </TranslateProvider>
       </body>
     </html>

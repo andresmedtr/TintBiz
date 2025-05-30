@@ -1,3 +1,4 @@
+import { TintLevel } from "@/constants";
 import { ExpandMore } from "@mui/icons-material";
 import {
   Accordion,
@@ -5,6 +6,7 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
+import { FormattedMessage } from "react-intl";
 
 export const TintAccordion = () => {
   return (
@@ -15,11 +17,22 @@ export const TintAccordion = () => {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography component="span">Accordion 1</Typography>
+          <Typography component="span">
+            <FormattedMessage id="block.model3d.square.accordion" />
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          {TintLevel.map(({ name, description, tone }) => {
+            return (
+              <div key={tone} className="flex flex-row justify-between">
+                <div className="flex flex-col">
+                  <FormattedMessage id={name} />
+                  <FormattedMessage id={description} />
+                </div>
+                <div className="w-[50px] h-[50px]" style={{ backgroundColor: tone }}></div>
+              </div>
+            );
+          })}
         </AccordionDetails>
       </Accordion>
     </>

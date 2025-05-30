@@ -1,5 +1,5 @@
-import Model3D from "@/blocks/model3D";
-import ContactUs from "@/blocks/contactUs";
+import { ContactUs } from "@/blocks/contactUs";
+import { Model3D } from "@/blocks/model3D";
 
 export default function Home() {
   return (
