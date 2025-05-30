@@ -50,7 +50,7 @@ export const QuoteForm = () => {
     <div className="bg-white shadow-lg rounded-lg p-6 w-md">
       <h3 className="text-xl font-bold title-primary mb-1">Request a Quote</h3>
       <p className="text-sm paragraph-primary mb-6">
-        Fill out the form below and we'll get back to you within 24 hours.
+        Fill out the form below and we&#39;ll get back to you within 24 hours.
       </p>
 
       <form className="space-y-4" onSubmit={handleSubmit}>
