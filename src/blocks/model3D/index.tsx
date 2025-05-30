@@ -21,14 +21,14 @@ export default function Model3D() {
             <TintAccordion />
           </div>
           <div>
-            {/* <ModelViewer
+            <ModelViewer
               src="https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb"
               alt="Un modelo 3D"
               auto-rotate={true}
               camera-controls={true}
               width="500px"
               height="500px"
-            /> */}
+            />
           </div>
         </div>
       </div>

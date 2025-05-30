@@ -1,5 +1,3 @@
-import { Box, Container, Typography, Paper, Button } from "@mui/material";
-import Grid from "@mui/material/Grid";
 import { QuoteForm } from "@/components/quoteForm";
 import { Phone, Mail, LocationOn } from "@mui/icons-material";
 

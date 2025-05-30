@@ -43,7 +43,6 @@ export const QuoteForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(form);
-    // You can plug in your email/send logic here
     sendEmail(form);
   };
 
