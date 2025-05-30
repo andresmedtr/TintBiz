@@ -1,4 +1,13 @@
 {
-  "test": "english",
-  "contactus.title": "CONTACT US"
+  "navbar.title.home": "Home",
+  "navbar.title.benefits": "Benefits",
+  "navbar.title.about": "About Us",
+  "navbar.title.Contact": "Contact",
+  "block.model3d.title": "Set Your Perfect Tint Level",
+  "block.model3d.parapgrah": "Experience the difference with our premium window tinting solutions",
+  "block.model3d.square.title":"Professional Window Tinting",
+  "block.model3d.square.paragrah":"Transform your vehicle with our premium tinting solutions. Enjoy enhanced privacy, UV protection, and energy efficiency with our professional-grade films.",
+  "block.model3d.square.accordion": "Choose Your Tint Level",
+  "block.model3d.square.button": "Get Your Quote Today"
+
 }
