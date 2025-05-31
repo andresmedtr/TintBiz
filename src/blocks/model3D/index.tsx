@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl";
 
 export const Model3D = () => {
   const { isActive } = useSwitch();
-  
+
   return (
     <div className="w-full h-[fit-content]">
       <div className="w-full h-fit text-center py-[50px]">
@@ -31,7 +31,11 @@ export const Model3D = () => {
           </div>
           <div>
             <ModelViewer
-              src={isActive ? "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb" : "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/house/house-GP4Zwy8YteIEFs1sAcyredbr91cvN9.glb"}
+              src={
+                isActive
+                  ? "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb"
+                  : "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/house/house-GP4Zwy8YteIEFs1sAcyredbr91cvN9.glb"
+              }
               alt="Un modelo 3D"
               auto-rotate={true}
               camera-controls={true}
@@ -43,4 +47,4 @@ export const Model3D = () => {
       </div>
     </div>
   );
-}
+};

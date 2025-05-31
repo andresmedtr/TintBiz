@@ -30,8 +30,7 @@ export const Navbar = () => {
                 onClick={() => setActiveTab(title)}
                 className={`group relative cursor-pointer font-bold px-1 transition-colors duration-300 hover:text-[#E52323] ${
                   isActive ? "text-[#E52323]" : "text-white"
-                }`}
-              >
+                }`}>
                 <FormattedMessage id={title} />
                 <span
                   className={`absolute left-0 -bottom-1 h-[2px] bg-[#E52323] transition-transform duration-300 origin-center 
@@ -43,7 +42,7 @@ export const Navbar = () => {
             );
           })}
         </div>
-          <SwitchButton />
+        <SwitchButton />
       </div>
     </nav>
   );
