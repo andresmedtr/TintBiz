@@ -21,6 +21,19 @@
   "block.model3d.square.accordion.option.5.description": "Máxima privacidad y protección",
   "block.model3d.square.accordion.option.6.name": "5% Polarizado Completo",
   "block.model3d.square.accordion.option.6.description": "Lámina ultraoscura para privacidad total y mínima entrada de luz",
+  "block.aboutUs.container.title": "Sobre Tints At Home",
+  "block.aboutUs.left.subtitle": "Nuestra Historia",
+  "block.aboutUs.left.description.1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates eum, esse quia culpa natus laborum suscipit odio voluptatem blanditiis sunt praesentium laboriosam quis facilisiure dignissimos veritatis odit. ¡Et!",
+  "block.aboutUs.left.description.2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates eum, esse quia culpa natus laborum suscipit odio voluptatem blanditiis sunt praesentium laboriosam quis facilisiure dignissimos veritatis odit. ¡Et!",
+  "block.aboutUs.right.subtitle": "Por Qué Hacemos Lo Que Hacemos",
+  "block.aboutUs.right.paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates eum, esse quia culpa natus laborum suscipit odio voluptatem blanditiis sunt praesentium laboriosam quis facilisiure dignissimos veritatis odit. ¡Et!",
+  "block.aboutUs.right.founders": "- Andy & Giovanny, Co-Fundadores",
+  "companyAchievements.tinted.vehicles": "500+",
+  "companyAchievements.description.1": "Vehículos Polarizados",
+  "companyAchievements.tinted.homes": "200+",
+  "companyAchievements.description.2": "Hogares Protegidos",
+  "companyAchievements.years.experience": "8+",
+  "companyAchievements.description.3": "Años de Experiencia",
   "block.contactUs.title": "Obtén tu cotización gratuita",
   "block.contactUs.paragraph0": "¿Listo para transformar tus",
   "block.contactUs.paragraph1": "activos",
@@ -40,5 +53,6 @@
   "quoteForm.fields.message": "Mensaje",
   "quoteForm.service.automotive": "Polarizado Automotriz",
   "quoteForm.service.residential": "Polarizado Residencial",
-  "quoteForm.service.commercial": "Polarizado Comercial"
+  "quoteForm.service.commercial": "Polarizado Comercial",
+  "quoteForm.submit.button": "Enviar Solicitud"
 }

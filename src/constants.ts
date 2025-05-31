@@ -1,28 +1,8 @@
-import { InputFieldConfig, TintLevelProps } from "./types/globalTypes";
-
-export const inputFields: InputFieldConfig[] = [
-  { id: "firstName", label: "quoteForm.fields.name" },
-  { id: "lastName", label: "quoteForm.fields.lastName" },
-  { id: "email", label: "quoteForm.fields.email", type: "email" },
-  { id: "phone", label: "quoteForm.fields.phone", type: "tel" },
-  { id: "service", label: "quoteForm.fields.serviceType" },
-  { id: "message", label: "quoteForm.fields.message", multiline: true },
-];
-
-export const serviceOptions = [
-  { value: "Automotive Tinting", labelId: "quoteForm.service.automotive" },
-  { value: "Residential Tinting", labelId: "quoteForm.service.residential" },
-  { value: "Commercial Tinting", labelId: "quoteForm.service.commercial" },
-];
-
-// const formFields: FieldConfig[] = [
-//   { name: "firstName", label: "First Name" },
-//   { name: "lastName", label: "Last Name" },
-//   { name: "email", label: "Email", type: "email" },
-//   { name: "phone", label: "Phone", type: "tel" },
-//   { name: "service", label: "Service Type" },
-//   { name: "message", label: "Message", multiline: true },
-// ];
+import {
+  InputFieldConfig,
+  TintLevelProps,
+  AchievementProps,
+} from "./types/globalTypes";
 
 export const NavbarFIelds: string[] = [
   "navbar.title.home",
@@ -62,4 +42,39 @@ export const TintLevel: TintLevelProps[] = [
     description: "block.model3d.square.accordion.option.6.description",
     tone: "#1A1A1A",
   },
+];
+
+// About us
+export const achievementStats: AchievementProps[] = [
+  {
+    end: 500,
+    label: "companyAchievements.description.1",
+    delay: 800,
+  },
+  {
+    end: 200,
+    label: "companyAchievements.description.2",
+    delay: 800,
+  },
+  {
+    end: 8,
+    label: "companyAchievements.description.3",
+    delay: 400,
+  },
+];
+
+// Contact us
+export const inputFields: InputFieldConfig[] = [
+  { id: "firstName", label: "quoteForm.fields.name" },
+  { id: "lastName", label: "quoteForm.fields.lastName" },
+  { id: "email", label: "quoteForm.fields.email", type: "email" },
+  { id: "phone", label: "quoteForm.fields.phone", type: "tel" },
+  { id: "service", label: "quoteForm.fields.serviceType" },
+  { id: "message", label: "quoteForm.fields.message", multiline: true },
+];
+
+export const serviceOptions = [
+  { value: "Automotive Tinting", labelId: "quoteForm.service.automotive" },
+  { value: "Residential Tinting", labelId: "quoteForm.service.residential" },
+  { value: "Commercial Tinting", labelId: "quoteForm.service.commercial" },
 ];

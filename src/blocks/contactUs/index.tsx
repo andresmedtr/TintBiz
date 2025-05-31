@@ -16,11 +16,15 @@ const contactInfo: ContactInfoItems[] = [
 
 export const ContactUs = () => {
   return (
-    <section id="contact" className="py-16 bg-[#F2F2F2]">
+    <section id="contact" className="py-16 bg-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold md:text-4xl mb-4">
-            <FormattedMessage id="block.contactUs.title" />
+            <FormattedMessage id="block.contactUs.title.1" />
+            <span className="text-[#E52323]">
+              <FormattedMessage id="block.contactUs.title.2" />
+            </span>
+            <FormattedMessage id="block.contactUs.title.3" />
           </h1>
           <p className="text-lg paragraph-primary">
             <FormattedMessage id="block.contactUs.paragraph0" />{" "}

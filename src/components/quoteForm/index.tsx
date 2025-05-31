@@ -44,7 +44,7 @@ export const QuoteForm = () => {
 
       <form className="space-y-4" onSubmit={handleSubmit}>
         {inputFields.map((field) => (
-          <div>
+          <div key={field.id}>
             <label
               htmlFor={field.id}
               className="block font-medium title-primary mb-1">
@@ -91,7 +91,7 @@ export const QuoteForm = () => {
         <button
           type="submit"
           className="w-full bg-[#E52323] hover:bg-[#B30000] text-white py-2 px-4 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
-          Send Quote Request
+          <FormattedMessage id="quoteForm.submit.button" />
         </button>
       </form>
     </div>
