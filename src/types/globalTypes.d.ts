@@ -1,4 +1,4 @@
-export interface QuoteFormFields {
+export interface QuoteFormValues {
   firstName: string;
   lastName: string;
   email: string;
@@ -7,9 +7,16 @@ export interface QuoteFormFields {
   message: string;
 }
 
-export interface InputFieldsProps {
-  id: string;
+export type ContactInfoItems = {
+  icon: ReactNode;
+  text: string;
+};
+
+export interface InputFieldConfig {
+  id: keyof QuoteFormValues;
   label: string;
+  multiline?: boolean;
+  type?: string;
 }
 
 export interface ModelViewerProps {
