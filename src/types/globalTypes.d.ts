@@ -18,6 +18,7 @@ export interface TintLevelProps {
   name: string;
   description: string;
   tone: string;
+  opacity: number;
 }
 
 export interface AchievementProps {
@@ -44,4 +45,33 @@ export interface InputFieldConfig {
   label: string;
   multiline?: boolean;
   type?: string;
+}
+
+export interface TintContextType {
+  opacity: number;
+  setOpacity: (value: number) => void;
+  tintName: string;
+  setTintName: (value: string) => void;
+};
+
+export interface Material {
+  name: string;
+  pbrMetallicRoughness: {
+    setBaseColorFactor: (color: [number, number, number, number]) => void;
+  };
+}
+
+export interface Model {
+  materials: Material[];
+}
+
+export interface ModelViewerElement extends HTMLElement {
+  model?: Model;
+}
+
+export interface CustomButtonProps {
+  id: string;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
+  onClick?: () => void;
+  width: string
 }

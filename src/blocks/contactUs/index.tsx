@@ -4,6 +4,7 @@ import { QuoteForm } from "@/components/quoteForm";
 import { Phone, Mail, LocationOn } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
 import { ContactInfoItems } from "@/types/globalTypes";
+import { businessHours } from "@/constants";
 
 const contactInfo: ContactInfoItems[] = [
   { icon: <Phone sx={{ color: "#E52323" }} />, text: "(555) 123-TINT" },
@@ -34,7 +35,6 @@ export const ContactUs = () => {
             <FormattedMessage id="block.contactUs.paragraph2" />
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 pt-8 gap-10 items-start justify-center max-w-3xl mx-auto">
           {/* Left: Contact Info */}
           <div>
@@ -45,7 +45,8 @@ export const ContactUs = () => {
               {contactInfo.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
+                  className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2"
+                >
                   <span>{item.icon}</span>
                   <span className="paragraph-primary">{item.text}</span>
                 </div>
@@ -57,15 +58,13 @@ export const ContactUs = () => {
                 <FormattedMessage id="block.contactUs.contactInfo.subtitle" />
               </h4>
               <div className="space-y-1 paragraph-primary">
-                <p>
-                  <FormattedMessage id="block.contactUs.contactInfo.subtitle.schedule.1" />
-                </p>
-                <p>
-                  <FormattedMessage id="block.contactUs.contactInfo.subtitle.schedule.2" />
-                </p>
-                <p>
-                  <FormattedMessage id="block.contactUs.contactInfo.subtitle.schedule.3" />
-                </p>
+                {businessHours.map((text) => {
+                  return (
+                    <p key={text}>
+                      <FormattedMessage id={text} />
+                    </p>
+                  );
+                })}
               </div>
             </div>
           </div>
