@@ -50,6 +50,8 @@ export interface InputFieldConfig {
 export interface TintContextType {
   opacity: number;
   setOpacity: (value: number) => void;
+  tintName: string;
+  setTintName: (value: string) => void;
 };
 
 export interface Material {
@@ -65,4 +67,11 @@ export interface Model {
 
 export interface ModelViewerElement extends HTMLElement {
   model?: Model;
+}
+
+export interface CustomButtonProps {
+  id: string;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
+  onClick?: () => void;
+  width: string
 }

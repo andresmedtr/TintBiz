@@ -84,3 +84,9 @@ export const serviceOptions = [
   { value: "Residential Tinting", labelId: "quoteForm.service.residential" },
   { value: "Commercial Tinting", labelId: "quoteForm.service.commercial" },
 ];
+
+export const businessHours: string[] = [
+  'block.contactUs.contactInfo.subtitle.schedule.1',
+  'block.contactUs.contactInfo.subtitle.schedule.2',
+  'block.contactUs.contactInfo.subtitle.schedule.3'
+]

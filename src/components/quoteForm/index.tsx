@@ -5,6 +5,7 @@ import { sendEmail } from "@/service/emailjs";
 import { QuoteFormValues } from "@/types/globalTypes";
 import { FormattedMessage } from "react-intl";
 import { inputFields, serviceOptions } from "@/constants";
+import { CustomButton } from "../customButton";
 
 export const QuoteForm = () => {
   // Initial form state
@@ -88,11 +89,8 @@ export const QuoteForm = () => {
             )}
           </div>
         ))}
-        <button
-          type="submit"
-          className="w-full bg-[#E52323] hover:bg-[#B30000] text-white py-2 px-4 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
-          <FormattedMessage id="quoteForm.submit.button" />
-        </button>
+
+        <CustomButton width="w-full" type="submit" id="quoteForm.submit.button" />
       </form>
     </div>
   );

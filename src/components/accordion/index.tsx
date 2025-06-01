@@ -5,10 +5,13 @@ import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
 export const TintAccordion = () => {
-  const { opacity, setOpacity } = useTint();
+  const { opacity, setOpacity, setTintName } = useTint();
 
-  const HandelOpacity = (opacity: number) => {
-    return () => setOpacity(opacity);
+  const HandelOpacity = (opacity: number, name: string) => {
+    return () => {
+      setOpacity(opacity);
+      setTintName(name);
+    };
   };
   return (
     <>
@@ -36,7 +39,7 @@ export const TintAccordion = () => {
                     ? "border-[#E52323] shadow-lg scale-[1.02]"
                     : "border-gray-200 hover:border-[#E52323] hover:shadow-md hover:scale-[1.02]"
                 }`}
-                  onClick={HandelOpacity(itemOpacity)}
+                  onClick={HandelOpacity(itemOpacity, name)}
                 >
                   <div className="flex flex-col">
                     <p className="font-semibold text-[#111111]">
