@@ -19,8 +19,8 @@ export const Model3D = () => {
         </p>
       </div>
       <div className="bg-white w-full h-fit flex justify-center py-[50px]">
-        <div className="w-[80%] h-full flex flex-row items-center justify-between border border-zinc-900">
-          <div className="w-fit h-full border border-zinc-900 gap-[20px]">
+        <div className="w-[80%] h-full flex flex-row items-center justify-between">
+          <div className="w-fit h-full gap-[20px]">
             <h1 className="text-5xl font-bold">
               <FormattedMessage id="block.model3d.square.title" />
             </h1>

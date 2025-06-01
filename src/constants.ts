@@ -16,31 +16,37 @@ export const TintLevel: TintLevelProps[] = [
     name: "block.model3d.square.accordion.option.1.name",
     description: "block.model3d.square.accordion.option.1.description",
     tone: "#FFFFFF",
+    opacity: 0.10
   },
   {
     name: "block.model3d.square.accordion.option.2.name",
     description: "block.model3d.square.accordion.option.2.description",
     tone: "#D9D9D9",
+    opacity: 0.25
   },
   {
     name: "block.model3d.square.accordion.option.3.name",
     description: "block.model3d.square.accordion.option.3.description",
     tone: "#A6A6A6",
+    opacity: 0.45
   },
   {
     name: "block.model3d.square.accordion.option.4.name",
     description: "block.model3d.square.accordion.option.4.description",
     tone: "#707070",
+    opacity: 0.65
   },
   {
     name: "block.model3d.square.accordion.option.5.name",
     description: "block.model3d.square.accordion.option.5.description",
     tone: "#404040",
+    opacity: 0.80
   },
   {
     name: "block.model3d.square.accordion.option.6.name",
     description: "block.model3d.square.accordion.option.6.description",
     tone: "#1A1A1A",
+    opacity: 1
   },
 ];
 
