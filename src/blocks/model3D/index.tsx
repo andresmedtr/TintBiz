@@ -12,7 +12,7 @@ export const Model3D = () => {
   const { tintName } = useTint();
 
   return (
-    <div className="w-full h-[fit-content] scroll-mt-[70px]" id="home">
+    <div className="w-full h-[fit-content] scroll-mt-[70]" id="home">
       <div className="w-full h-fit text-center py-[50px]">
         <h1 className="text-5xl font-bold title-primary ">
           <FormattedMessage id="block.model3d.title" />

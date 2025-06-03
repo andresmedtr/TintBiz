@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2]`}>
+        className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2] `}>
         <TranslateProvider>
           <SwitchProvider>
             <TintProvider>

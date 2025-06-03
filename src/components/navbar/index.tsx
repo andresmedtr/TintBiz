@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [activeTab, setActiveTab] = useState<string>(NavbarFIelds[0]);
 
   return (
-    <nav className="w-full h-[70px] bg-[#111111] flex flex-row items-center justify-center shadow-2xl sticky top-0">
+    <nav className="w-full h-[70px] bg-[#111111] flex flex-row items-center justify-center shadow-2xl sticky top-0 z-[1]">
       <div className="max-w-[2000px] w-full h-full flex flex-row justify-between mx-[50px]">
         <div className="w-fit h-full">
           <a href="#home">
@@ -28,10 +28,8 @@ export const Navbar = () => {
             const isActive = activeTab === title;
             const anchor = title.split(".")[2].toLowerCase();
             return (
-              // Splitting the navbar.title.VARIABLE from constants.ts
-              <a href={`#${anchor}`}>
+              <a href={`#${anchor}`} key={anchor}>
                 <div
-                  key={title}
                   onClick={() => setActiveTab(title)}
                   className={`group relative cursor-pointer font-bold px-1 transition-colors duration-300 hover:text-[#E52323] ${
                     isActive ? "text-[#E52323]" : "text-white"

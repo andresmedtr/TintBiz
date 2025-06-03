@@ -3,10 +3,14 @@
 import React from "react";
 import { CompanyAchievements } from "@/components/companyAchievements";
 import { FormattedMessage } from "react-intl";
+import Image from "next/image";
+import { foundersPictures } from "@/constants";
 
 export const AboutUs = () => {
   return (
-    <section id="about" className="py-16 bg-white scroll-mt-[70px]">
+    <section
+      id="about"
+      className="py-12 bg-white scroll-mt-[70px] min-h-screen ">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl font-bold md:text-4xl mb-4">
@@ -40,6 +44,31 @@ export const AboutUs = () => {
                 <FormattedMessage id="block.aboutUs.right.founders" />
               </p>
             </div>
+          </div>
+          <div className="flex flex-wrap gap-8 justify-center items-start">
+            {foundersPictures.map((founder) => (
+              <div
+                key={founder.name}
+                className="flex flex-col items-center text-center max-w-xs w-full sm:w-auto px-4">
+                <div
+                  className={`relative w-full aspect-[3/4] max-w-[250px] ${
+                    founder.name === "Andy Romero" ? "scale-[0.95]" : ""
+                  }`}>
+                  <Image
+                    src={founder.source}
+                    alt={`Photo of ${founder.name}`}
+                    fill
+                    className="rounded-2xl object-cover image"
+                    sizes="(max-width: 768px) 100vw, 300px"
+                  />
+                </div>
+                <div className="h-4" />
+                <h3 className="mt-4 text-2xl font-semibold">{founder.name}</h3>
+                <p className="text-[#333333]">
+                  <FormattedMessage id={founder.role} />
+                </p>
+              </div>
+            ))}
           </div>
           <CompanyAchievements />
         </div>
