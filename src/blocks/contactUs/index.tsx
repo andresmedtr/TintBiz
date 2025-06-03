@@ -3,21 +3,30 @@
 import { QuoteForm } from "@/components/quoteForm";
 import { Phone, Mail, LocationOn } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
-import { ContactInfoItems } from "@/types/globalTypes";
+import { contactInfo } from "@/constants";
 import { businessHours } from "@/constants";
 
-const contactInfo: ContactInfoItems[] = [
-  { icon: <Phone sx={{ color: "#E52323" }} />, text: "(555) 123-TINT" },
-  { icon: <Mail sx={{ color: "#E52323" }} />, text: "info@tintpro.com" },
-  {
-    icon: <LocationOn sx={{ color: "#E52323" }} />,
-    text: "123 Tinting Ave, Your City, ST 12345",
-  },
-];
+const getIcon = (key: string) => {
+  if (key === "phone") return <Phone sx={{ color: "#E52323" }} />;
+  if (key === "email") return <Mail sx={{ color: "#E52323" }} />;
+  if (key === "address") return <LocationOn sx={{ color: "#E52323" }} />;
+  return null;
+};
+
+const getHref = (type: string, text: string) => {
+  if (type === "phone") return `tel:${text}`;
+  if (type === "email") return `mailto:${text}`;
+  if (type === "address") {
+    return "https://www.google.com/maps?q=123+Tinting+Ave,+Your+City,+ST+12345&utm_source=andres";
+  }
+  return "#";
+};
 
 export const ContactUs = () => {
   return (
-    <section id="contact" className="py-16 bg-light">
+    <section
+      id="contact"
+      className="py-12 bg-light scroll-mt-[30px] min-h-screen ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold md:text-4xl mb-4">
@@ -43,13 +52,15 @@ export const ContactUs = () => {
             </h3>
             <div className="space-y-4 mb-8">
               {contactInfo.map((item, idx) => (
-                <div
+                // Pasar a anchor con href para que active llamada/email/maps
+                <a
+                  href={getHref(item.type, item.text)}
                   key={idx}
-                  className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2"
-                >
-                  <span>{item.icon}</span>
+                  target={item.type === "address" ? "_blank" : undefined}
+                  className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
+                  <span>{getIcon(item.type)}</span>
                   <span className="paragraph-primary">{item.text}</span>
-                </div>
+                </a>
               ))}
             </div>
 

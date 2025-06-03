@@ -27,15 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2]`}
-      >
+        className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2] `}>
         <TranslateProvider>
           <SwitchProvider>
             <TintProvider>
               <Navbar />
-              <div className="max-w-[2000px] w-full">{children}</div>
+              <div className="max-w-[3000px] w-full">{children}</div>
             </TintProvider>
           </SwitchProvider>
         </TranslateProvider>

@@ -3,3 +3,7 @@
 .gray-bg {
   background-color: #f2f2f2;
 }
+
+.image {
+  mask-image: linear-gradient(black 60%, transparent);
+}

@@ -19,6 +19,14 @@ export interface TintLevelProps {
   opacity: number;
 }
 
+export interface ImagesProps {
+  source: string;
+  width: number;
+  height: number;
+  name?: string;
+  role?: string;
+}
+
 export interface AchievementProps {
   end: number;
   label: string;
@@ -34,8 +42,8 @@ export interface QuoteFormValues {
 }
 
 export type ContactInfoItems = {
-  icon: ReactNode;
   text: string;
+  type: string;
 };
 
 export interface InputFieldConfig {
@@ -50,7 +58,7 @@ export interface TintContextType {
   setOpacity: (value: number) => void;
   tintName: string;
   setTintName: (value: string) => void;
-};
+}
 
 export interface Material {
   name: string;
@@ -71,5 +79,5 @@ export interface CustomButtonProps {
   id: string;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   onClick?: () => void;
-  width: string
+  width: string;
 }
