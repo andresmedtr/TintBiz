@@ -15,7 +15,7 @@ export const TintAccordion = () => {
   };
   return (
     <>
-      <Accordion className="border-b-1 border-gray-200">
+      <Accordion className="border-b-1 border-gray-200 hidden lg:block">
         <AccordionSummary
           expandIcon={<ExpandMore />}
           aria-controls="panel1-content"
