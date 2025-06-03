@@ -56,7 +56,6 @@ function ModelViewer({
       auto-rotate={autoRotate}
       camera-controls={cameraControls}
       ar={ar}
-      style={{ width, height }}
       class={className}
       disable-zoom
       camera-orbit="0deg 90deg auto"

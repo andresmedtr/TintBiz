@@ -21,7 +21,7 @@ export const Navbar = () => {
             className="w-fit h-full"
           />
         </div>
-        <div className="w-fit h-full flex flex-row items-center gap-[50px]">
+        <div className="w-fit h-full flex-row items-center gap-[50px] hidden md:flex">
           {NavbarFIelds.map((title) => {
             const isActive = activeTab === title;
             return (
