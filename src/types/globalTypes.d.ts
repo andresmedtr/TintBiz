@@ -4,9 +4,7 @@ export interface ModelViewerProps {
   autoRotate?: boolean;
   cameraControls?: boolean;
   ar?: boolean;
-  className?: string;
-  width: string;
-  height: string;
+  className: string;
 }
 
 export interface SwitchContextType {

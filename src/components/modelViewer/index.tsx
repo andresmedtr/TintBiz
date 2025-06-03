@@ -12,8 +12,6 @@ function ModelViewer({
   cameraControls = true,
   ar = false,
   className = "",
-  width = "100px",
-  height = "100%",
 }: ModelViewerProps) {
   const modelRef = useRef<ModelViewerElement | null>(null);
   const { opacity } = useTint();

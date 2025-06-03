@@ -51,8 +51,6 @@ export const Model3D = () => {
                 alt="Un modelo 3D"
                 auto-rotate={true}
                 camera-controls={true}
-                width="700px"
-                height="700px"
                 className="h-[400px] lg:h-[700px] w-[300px] sm:w-[400px] md:w-[600px] lg:w-[700px] xl:w-[900px]"
               />
             </div>
