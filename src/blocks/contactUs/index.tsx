@@ -26,7 +26,7 @@ export const ContactUs = () => {
   return (
     <section
       id="contact"
-      className="py-12 bg-light scroll-mt-[30px] min-h-screen ">
+      className="py-12 bg-light scroll-mt-[30px] h-fit">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold md:text-4xl mb-4">
