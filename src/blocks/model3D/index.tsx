@@ -5,6 +5,7 @@ import { CustomButton } from "@/components/customButton";
 import ModelViewer from "@/components/modelViewer";
 import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
+import { motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
 
 export const Model3D = () => {
@@ -13,20 +14,30 @@ export const Model3D = () => {
 
   return (
     <section
-      className="w-full h-fit flex flex-col justify-center scroll-mt-[70]"
+      className="w-full h-fit flex flex-col justify-center items-center scroll-mt-[70]"
       id="home"
     >
-      <div className="w-[90%] h-fit text-center py-[25px] xl:py-[50px]">
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full h-fit text-center py-[25px] xl:py-[50px]"
+      >
         <h1 className="text-2xl font-bold title-primary xl:text-5xl">
           <FormattedMessage id="block.model3d.title" />
         </h1>
         <p className="paragraph-primary">
           <FormattedMessage id="block.model3d.parapgrah" />
         </p>
-      </div>
+      </motion.div>
       <div className="bg-white w-full h-fit flex justify-center py-[50px]">
         <div className="w-[80%] h-full flex flex-col-reverse items-center justify-between xl:flex-row">
-          <div className="w-fit h-full flex flex-col gap-[20px]">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="w-fit h-full flex flex-col gap-[20px]"
+          >
             <h1 className="text-2xl font-bold xl:text-5xl">
               <FormattedMessage id="block.model3d.square.title" />
             </h1>
@@ -40,8 +51,12 @@ export const Model3D = () => {
               width="w-full lg:w-fit"
               id="block.model3d.square.button"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
             <div className="relative bg-[#F2F2F2] h-[400px] rounded-lg overflow-hidden flex items-center lg:h-[500px]">
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
                 <p className="text-sm font-semibold text-[#111111]">
@@ -60,7 +75,7 @@ export const Model3D = () => {
                 className="h-[400px] lg:h-[700px] w-[300px] sm:w-[400px] md:w-[600px] lg:w-[700px] xl:w-[900px]"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
