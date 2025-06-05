@@ -12,7 +12,10 @@ export const Model3D = () => {
   const { tintName } = useTint();
 
   return (
-    <div className="w-full h-[fit-content] flex flex-col justify-center scroll-mt-[70]" id="home">
+    <section
+      className="w-full h-fit flex flex-col justify-center scroll-mt-[70]"
+      id="home"
+    >
       <div className="w-[90%] h-fit text-center py-[25px] xl:py-[50px]">
         <h1 className="text-2xl font-bold title-primary xl:text-5xl">
           <FormattedMessage id="block.model3d.title" />
@@ -33,7 +36,10 @@ export const Model3D = () => {
               </p>
               <TintAccordion />
             </div>
-            <CustomButton width="w-full lg:w-fit" id="block.model3d.square.button" />
+            <CustomButton
+              width="w-full lg:w-fit"
+              id="block.model3d.square.button"
+            />
           </div>
           <div>
             <div className="relative bg-[#F2F2F2] h-[400px] rounded-lg overflow-hidden flex items-center lg:h-[500px]">
@@ -57,6 +63,6 @@ export const Model3D = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
