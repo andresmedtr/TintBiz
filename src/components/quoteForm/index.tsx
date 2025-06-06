@@ -34,7 +34,7 @@ export const QuoteForm = () => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 w-md">
+    <div className="bg-white shadow-lg rounded-lg p-6 md:w-fit">
       <h3 className="text-xl font-bold title-primary mb-1">
         {" "}
         <FormattedMessage id="quoteForm.title" />

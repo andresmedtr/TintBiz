@@ -83,7 +83,7 @@ export const foundersPictures: ImagesProps[] = [
     source: "/founders/giovanny.webp",
     width: 200,
     height: 250,
-    name: "Gio Romero",
+    name: "Giovanny Rubio",
     role: "block.aboutUs.founders.role.gio",
   },
 ];
