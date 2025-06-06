@@ -24,12 +24,10 @@ const getHref = (type: string, text: string) => {
 
 export const ContactUs = () => {
   return (
-    <section
-      id="contact"
-      className="py-12 bg-light scroll-mt-[30px] h-fit">
+    <section id="contact" className="py-12 bg-light scroll-mt-[30px] h-fit">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold md:text-4xl mb-4">
+          <h1 className="text-2xl font-bold md:text-4xl mb-4">
             <FormattedMessage id="block.contactUs.title.1" />
             <span className="text-[#E52323]">
               <FormattedMessage id="block.contactUs.title.2" />
@@ -44,10 +42,10 @@ export const ContactUs = () => {
             <FormattedMessage id="block.contactUs.paragraph2" />
           </p>
         </div>
-        <div className="grid md:grid-cols-2 pt-8 gap-10 items-start justify-center max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 pt-8 gap-10 items-start justify-center max-w-4xl mx-auto">
           {/* Left: Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold title-primary mb-6">
+          <div className="">
+            <h3 className="text-xl lg:text-2xl font-bold title-primary mb-6 ">
               <FormattedMessage id="block.contactUs.contactInfo.title" />
             </h3>
             <div className="space-y-4 mb-8">
