@@ -81,3 +81,8 @@ export interface CustomButtonProps {
   onClick?: () => void;
   width: string;
 }
+
+export interface FooterType {
+  title: string;
+  items?: string[];
+}

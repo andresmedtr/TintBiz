@@ -4,6 +4,7 @@ import {
   AchievementProps,
   ContactInfoItems,
   ImagesProps,
+  FooterType,
 } from "./types/globalTypes";
 
 export const NavbarFIelds: string[] = [
@@ -123,4 +124,32 @@ export const businessHours: string[] = [
   "block.contactUs.contactInfo.subtitle.schedule.1",
   "block.contactUs.contactInfo.subtitle.schedule.2",
   "block.contactUs.contactInfo.subtitle.schedule.3",
+];
+
+export const footerInfo: FooterType[] = [
+  {
+    title: "footer.title.1",
+    items: [
+      "footer.title.1.description.1",
+      "footer.title.1.description.2",
+      "footer.title.1.description.3",
+      "footer.title.1.description.4",
+    ],
+  },
+  {
+    title: "footer.title.2",
+    items: [
+      "footer.title.2.description.1",
+      "footer.title.2.description.2",
+      "footer.title.2.description.3",
+    ],
+  },
+  {
+    title: "footer.title.3",
+    items: [
+      "footer.title.3.description.1",
+      "footer.title.3.description.2",
+      "footer.title.3.description.3",
+    ],
+  },
 ];
