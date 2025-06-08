@@ -6,7 +6,7 @@ import { Email, Instagram, WhatsApp } from "@mui/icons-material";
 export const FloatingButton = () => {
   const buttons = [
     { icon: <WhatsApp />, target: "https://wa.me/1234567890" },
-    { icon: <Instagram />, target: "https://instagram.com/yourprofile" },
+    { icon: <Instagram />, target: "https://www.instagram.com/tintsathomefl/" },
     { icon: <Email />, target: "#contact" },
   ];
 
