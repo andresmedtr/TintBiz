@@ -2,7 +2,7 @@
   "navbar.title.home": "Home",
   "navbar.title.benefits": "Benefits",
   "navbar.title.about": "About Us",
-  "navbar.title.Contact": "Contact",
+  "navbar.title.Contact": "Get a Quote",
   "block.model3d.title": "Professional Window Tinting",
   "block.model3d.parapgrah": "Experience the difference with our premium window tinting solutions",
   "block.model3d.square.title": "Set Your Perfect Tint Level",
@@ -74,6 +74,8 @@
   "footer.title.3.description.1": "WhatsApp",
   "footer.title.3.description.2": "Instagram",
   "footer.title.3.description.3": "TikTok",
-
-  "footer.copyright": "© 2025 TintsAtHome. All rights reserved. Licensed & Insured."
+  "footer.copyright": "© 2025 TintsAtHome. All rights reserved. Licensed & Insured.",
+  "floating.button.content.1": "IG",
+  "floating.button.content.2": "EMAIL",
+  "floating.button.content.3": "WS"
 }

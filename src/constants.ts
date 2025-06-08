@@ -108,15 +108,15 @@ export const serviceOptions = [
 export const contactInfo: ContactInfoItems[] = [
   {
     text: "(555) 123-TINT",
-    type: "phone",
+    type: "whatsapp",
   },
   {
     text: "info@tintpro.com",
     type: "email",
   },
   {
-    text: "123 Tinting Ave, Your City, ST 12345",
-    type: "address",
+    text: "tintsathomefl",
+    type: "instagram",
   },
 ];
 
