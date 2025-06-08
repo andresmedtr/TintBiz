@@ -39,7 +39,7 @@ export const Footer = () => {
           <FormattedMessage id="footer.copyright" />
         </p>
         <p className="text-sm">
-          Created by: <span>Andres</span> & <span>Rodrigo</span>
+          Developed and Designed by <span>Anmedev</span> & <span>Congrakk</span>
         </p>
       </div>
     </footer>

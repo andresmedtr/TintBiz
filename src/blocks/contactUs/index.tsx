@@ -1,23 +1,22 @@
 "use client";
 
 import { QuoteForm } from "@/components/quoteForm";
-import { Phone, Mail, LocationOn } from "@mui/icons-material";
+import { WhatsApp, Mail, Instagram } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
-import { contactInfo } from "@/constants";
-import { businessHours } from "@/constants";
+import { contactInfo, businessHours } from "@/constants";
 
 const getIcon = (key: string) => {
-  if (key === "phone") return <Phone sx={{ color: "#E52323" }} />;
+  if (key === "whatsapp") return <WhatsApp sx={{ color: "#E52323" }} />;
   if (key === "email") return <Mail sx={{ color: "#E52323" }} />;
-  if (key === "address") return <LocationOn sx={{ color: "#E52323" }} />;
+  if (key === "instagram") return <Instagram sx={{ color: "#E52323" }} />;
   return null;
 };
 
 const getHref = (type: string, text: string) => {
-  if (type === "phone") return `tel:${text}`;
+  if (type === "whatsapp") return `https://wa.me/1234567890`;
   if (type === "email") return `mailto:${text}`;
-  if (type === "address") {
-    return "https://www.google.com/maps?q=123+Tinting+Ave,+Your+City,+ST+12345&utm_source=andres";
+  if (type === "instagram") {
+    return "https://www.instagram.com/tintsathomefl/";
   }
   return "#";
 };
@@ -50,11 +49,10 @@ export const ContactUs = () => {
             </h3>
             <div className="space-y-4 mb-8">
               {contactInfo.map((item, idx) => (
-                // Pasar a anchor con href para que active llamada/email/maps
                 <a
                   href={getHref(item.type, item.text)}
                   key={idx}
-                  target={item.type === "address" ? "_blank" : undefined}
+                  target={item.type !== "email" ? "_blank" : undefined}
                   className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
                   <span>{getIcon(item.type)}</span>
                   <span className="paragraph-primary">{item.text}</span>

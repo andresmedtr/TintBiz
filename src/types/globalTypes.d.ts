@@ -76,10 +76,11 @@ export interface ModelViewerElement extends HTMLElement {
 }
 
 export interface CustomButtonProps {
-  id: string;
+  id?: string;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   onClick?: () => void;
   width: string;
+  icon?: ReactNode;
 }
 
 export interface FooterType {

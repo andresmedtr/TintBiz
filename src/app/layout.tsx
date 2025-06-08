@@ -5,6 +5,7 @@ import { TranslateProvider } from "@/provider/translate";
 import { Navbar } from "@/components/navbar";
 import { SwitchProvider } from "@/provider/switch";
 import { TintProvider } from "@/provider/tint";
+import { Footer } from "@/components/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
             <TintProvider>
               <Navbar />
               <div className="max-w-[3000px] w-full">{children}</div>
+              <Footer />
             </TintProvider>
           </SwitchProvider>
         </TranslateProvider>
