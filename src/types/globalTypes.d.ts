@@ -87,3 +87,17 @@ export interface FooterType {
   title: string;
   items?: string[];
 }
+
+export interface SocialMediaItem {
+  icon: ReactElement;
+  target: string;
+}
+
+export interface SocialMediaMap {
+  whatsapp: SocialMediaItem;
+  instagram: SocialMediaItem;
+  email: SocialMediaItem;
+}
+
+export type SocialMediaType = "whatsapp" | "instagram" | "email";
+
