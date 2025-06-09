@@ -3,7 +3,7 @@
 import { useTint } from "@/hooks/useTint";
 import { ModelViewerElement, ModelViewerProps } from "@/types/globalTypes";
 import "@google/model-viewer/lib/model-viewer";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function ModelViewer({
   src,
@@ -15,6 +15,21 @@ function ModelViewer({
 }: ModelViewerProps) {
   const modelRef = useRef<ModelViewerElement | null>(null);
   const { opacity } = useTint();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    const viewer = modelRef.current;
+
+    if (!viewer) return;
+
+    const handleLoad = () => setLoading(false);
+    viewer.addEventListener("load", handleLoad);
+
+    return () => {
+      viewer.removeEventListener("load", handleLoad);
+    };
+  }, [src]);
 
   useEffect(() => {
     const viewer = modelRef.current;
@@ -47,19 +62,28 @@ function ModelViewer({
   }, [opacity]);
 
   return (
-    <model-viewer
-      ref={modelRef}
-      src={src}
-      alt={alt}
-      auto-rotate={autoRotate}
-      camera-controls={cameraControls}
-      ar={ar}
-      class={className}
-      disable-zoom
-      camera-orbit="0deg 90deg auto"
-      min-camera-orbit="auto 90deg auto"
-      max-camera-orbit="auto 90deg auto"
-    />
+    <div className="relative w-fit h-fit">
+      {loading && (
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#F2F2F2] rounded-lg backdrop-blur-sm">
+          <span className="animate-spin w-10 h-10 border-4 border-[#E52323] border-t-transparent rounded-full"></span>
+        </div>
+      )}
+
+      <model-viewer
+        key={src}
+        ref={modelRef}
+        src={src}
+        alt={alt}
+        auto-rotate={autoRotate}
+        camera-controls={cameraControls}
+        ar={ar}
+        class={className}
+        disable-zoom
+        camera-orbit="0deg 90deg auto"
+        min-camera-orbit="auto 90deg auto"
+        max-camera-orbit="auto 90deg auto"
+      />
+    </div>
   );
 }
 

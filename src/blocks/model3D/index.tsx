@@ -34,7 +34,7 @@ export const Model3D = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="w-fit h-full flex flex-col gap-[20px]">
+            className="w-full h-full flex flex-col gap-[20px]">
             <h1 className="text-2xl font-bold xl:text-5xl">
               <FormattedMessage id="block.model3d.square.title" />
             </h1>

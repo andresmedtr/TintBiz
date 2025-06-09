@@ -5,6 +5,7 @@ import {
   ContactInfoItems,
   ImagesProps,
   FooterType,
+  SocialMediaType,
 } from "./types/globalTypes";
 
 export const NavbarFIelds: string[] = [
@@ -153,3 +154,5 @@ export const footerInfo: FooterType[] = [
     ],
   },
 ];
+
+export const socialMedia: SocialMediaType[] = ["whatsapp", "instagram", "email"];

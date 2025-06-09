@@ -58,6 +58,8 @@ export interface TintContextType {
   setOpacity: (value: number) => void;
   tintName: string;
   setTintName: (value: string) => void;
+  tintDescription: string;
+  setTintDescription: (value: string) => void;
 }
 
 export interface Material {
@@ -86,4 +88,25 @@ export interface CustomButtonProps {
 export interface FooterType {
   title: string;
   items?: string[];
+}
+
+export interface SocialMediaItem {
+  icon: ReactElement;
+  target: string;
+}
+
+export interface SocialMediaMap {
+  whatsapp: SocialMediaItem;
+  instagram: SocialMediaItem;
+  email: SocialMediaItem;
+}
+
+export type SocialMediaType = "whatsapp" | "instagram" | "email";
+
+export interface TintProps {
+  children: (props: {
+    name: string;
+    description: string;
+    tone: string;
+  }) => ReactNode;
 }
