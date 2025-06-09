@@ -1,18 +1,11 @@
-import { TintLevel } from "@/constants";
-import { useTint } from "@/hooks/useTint";
 import { ExpandMore } from "@mui/icons-material";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { FormattedMessage } from "react-intl";
+import { ChooseTInts } from "../chooseTints";
+import { useTint } from "@/hooks/useTint";
 
 export const TintAccordion = () => {
-  const { opacity, setOpacity, setTintName } = useTint();
-
-  const HandelOpacity = (opacity: number, name: string) => {
-    return () => {
-      setOpacity(opacity);
-      setTintName(name);
-    };
-  };
+  const { tintName, tintDescription } = useTint();
   return (
     <>
       <Accordion className="border-b-1 border-gray-200 hidden lg:block">
@@ -27,38 +20,51 @@ export const TintAccordion = () => {
           </p>
         </AccordionSummary>
         <AccordionDetails>
-          {TintLevel.map(
-            ({ name, description, tone, opacity: itemOpacity }) => {
-              const isActive = opacity === itemOpacity;
-              return (
-                <div
-                  key={tone}
-                  className={`flex flex-row justify-between p-3 mb-3 rounded-lg border-2 cursor-pointer transition-all duration-300
-                ${
-                  isActive
-                    ? "border-[#E52323] shadow-lg scale-[1.02]"
-                    : "border-gray-200 hover:border-[#E52323] hover:shadow-md hover:scale-[1.02]"
-                }`}
-                  onClick={HandelOpacity(itemOpacity, name)}
-                >
-                  <div className="flex flex-col">
-                    <p className="font-semibold text-[#111111]">
-                      <FormattedMessage id={name} />
-                    </p>
-                    <p className="text-sm text-[#333333]">
-                      <FormattedMessage id={description} />
-                    </p>
-                  </div>
-                  <div
-                    className="w-[50px] h-[50px] border border-gray-300 rounded"
-                    style={{ backgroundColor: tone }}
-                  ></div>
+          <ChooseTInts>
+            {({ name, description, tone }) => (
+              <>
+                <div className="flex flex-col">
+                  <p className="font-semibold text-[#111111]">
+                    <FormattedMessage id={name} />
+                  </p>
+                  <p className="text-sm text-[#333333]">
+                    <FormattedMessage id={description} />
+                  </p>
                 </div>
-              );
-            }
-          )}
+                <div
+                  className="w-[50px] h-[50px] border border-gray-300 rounded"
+                  style={{ backgroundColor: tone }}
+                ></div>
+              </>
+            )}
+          </ChooseTInts>
         </AccordionDetails>
       </Accordion>
+      <div className="w-full flex overflow-x-auto lg:hidden px-2 gap-2">
+        <ChooseTInts>
+          {({ name, tone }) => (
+            <>
+              <div
+                className="w-[20px] h-[20px] border border-gray-300 rounded"
+                style={{ backgroundColor: tone }}
+              ></div>
+              <div className="flex flex-col">
+                <p className="font-semibold text-[#111111]">
+                  <FormattedMessage id={name} />
+                </p>
+              </div>
+            </>
+          )}
+        </ChooseTInts>
+      </div>
+      <div className="mb-6 bg-[#F2F2F2] p-3 rounded lg:hidden">
+        <p className="text-sm font-semibold text-[#111111]">
+          <FormattedMessage id={tintName} />
+        </p>
+        <p className="text-xs text-[#333333]">
+          <FormattedMessage id={tintDescription} />
+        </p>
+      </div>
     </>
   );
 };

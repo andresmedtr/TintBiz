@@ -58,6 +58,8 @@ export interface TintContextType {
   setOpacity: (value: number) => void;
   tintName: string;
   setTintName: (value: string) => void;
+  tintDescription: string;
+  setTintDescription: (value: string) => void;
 }
 
 export interface Material {
@@ -101,3 +103,10 @@ export interface SocialMediaMap {
 
 export type SocialMediaType = "whatsapp" | "instagram" | "email";
 
+export interface TintProps {
+  children: (props: {
+    name: string;
+    description: string;
+    tone: string;
+  }) => ReactNode;
+}
