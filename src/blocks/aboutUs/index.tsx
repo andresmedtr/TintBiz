@@ -38,7 +38,7 @@ export const AboutUs = () => {
               initial={{ x: 100, opacity: 0.5 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="gray-bg p-8 rounded-lg transition-all duration-500 shadow-lg opacity-100 translate-x-0">
+              className="bg-[#f2f2f2] p-8 rounded-lg transition-all duration-500 shadow-lg opacity-100 translate-x-0">
               <h3 className="text-xl font-bold text-[#111111] mb-4">
                 <FormattedMessage id="block.aboutUs.right.subtitle" />
               </h3>

@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
-.gray-bg {
-  background-color: #f2f2f2;
-}
-
 .image {
   mask-image: linear-gradient(black 60%, transparent);
 }
+
+.benefits-section {
+  background-image: url("/benefits/bgbenefits.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+/* .carwash-section {
+  background-image: url("/carwash/carwashbg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */

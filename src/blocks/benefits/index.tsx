@@ -4,10 +4,12 @@ import { FormattedMessage } from "react-intl";
 
 export const Benefits = () => {
   return (
-    <section id="benefits" className="scroll-mt-[70px] py-12 h-fit">
+    <section
+      id="benefits"
+      className="scroll-mt-[70px] py-12 md:min-h-[90vh] min-h-[40vh] benefits-section bg-top md:bg-center">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-2xl font-bold md:text-4xl mb-4">
+          <h1 className="text-2xl font-bold md:text-4xl mb-4 text-white">
             <FormattedMessage id="block.benefits.title.1" />
             <span className="text-[#E52323]">
               <FormattedMessage id="block.benefits.title.2" />
