@@ -5,7 +5,7 @@ export const CarWash = () => {
     <section
       id="carwash"
       className="relative carwash-section
-    bg-[url('/carwash/carwashbg.svg')] 
+    bg-[url('/carwash/carwashbg2.svg')] 
     bg-no-repeat 
     bg-[length:150%_auto] 
     md:bg-[length:100%_auto] 
