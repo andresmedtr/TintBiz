@@ -48,13 +48,7 @@ export const ContactUs = () => {
                         : undefined
                     }
                     target="_blank"
-                    onClick={() =>
-                      scrollToView(
-                        contact.target.includes("@")
-                          ? contact.target
-                          : item.text
-                      )
-                    }
+                    onClick={() => scrollToView(contact.target)}
                     className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
                     <span className="text-[#E52323]">{contact.icon}</span>
                     <span className="paragraph-primary">{item.text}</span>
