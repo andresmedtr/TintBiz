@@ -1,27 +1,14 @@
 "use client";
 
 import { QuoteForm } from "@/components/quoteForm";
-import { WhatsApp, Mail, Instagram } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
 import { contactInfo, businessHours } from "@/constants";
-
-const getIcon = (key: string) => {
-  if (key === "whatsapp") return <WhatsApp sx={{ color: "#E52323" }} />;
-  if (key === "email") return <Mail sx={{ color: "#E52323" }} />;
-  if (key === "instagram") return <Instagram sx={{ color: "#E52323" }} />;
-  return null;
-};
-
-const getHref = (type: string, text: string) => {
-  if (type === "whatsapp") return `https://wa.me/1234567890`;
-  if (type === "email") return `mailto:${text}`;
-  if (type === "instagram") {
-    return "https://www.instagram.com/tintsathomefl/";
-  }
-  return "#";
-};
+import { getSocialMediaMap } from "@/utils/getSocialMediaMap";
+import { scrollToView } from "@/utils/scrollToView";
 
 export const ContactUs = () => {
+  const iconsInformation = getSocialMediaMap();
+
   return (
     <section id="contact" className="py-12 bg-light scroll-mt-[30px] h-fit">
       <div className="container mx-auto px-4">
@@ -48,16 +35,26 @@ export const ContactUs = () => {
               <FormattedMessage id="block.contactUs.contactInfo.title" />
             </h3>
             <div className="space-y-4 mb-8">
-              {contactInfo.map((item, idx) => (
-                <a
-                  href={getHref(item.type, item.text)}
-                  key={idx}
-                  target={item.type !== "email" ? "_blank" : undefined}
-                  className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
-                  <span>{getIcon(item.type)}</span>
-                  <span className="paragraph-primary">{item.text}</span>
-                </a>
-              ))}
+              {contactInfo.map((item, idx) => {
+                const contact = iconsInformation[item.type];
+                if (!contact) return null;
+
+                return (
+                  <a
+                    key={idx}
+                    href={
+                      contact.target != "tintsathome@fl.com"
+                        ? contact.target
+                        : undefined
+                    }
+                    target="_blank"
+                    onClick={() => scrollToView(contact.target)}
+                    className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
+                    <span className="text-[#E52323]">{contact.icon}</span>
+                    <span className="paragraph-primary">{item.text}</span>
+                  </a>
+                );
+              })}
             </div>
 
             <div>

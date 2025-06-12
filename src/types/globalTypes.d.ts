@@ -19,6 +19,15 @@ export interface TintLevelProps {
   opacity: number;
 }
 
+export interface CardProps {
+  image?: string;
+  title?: string;
+  price?: string;
+  subtitle?: string;
+  features?: string[];
+  iconList?: { icon: JSX.Element; text: string }[];
+}
+
 export interface ImagesProps {
   source: string;
   width: number;
@@ -43,7 +52,7 @@ export interface QuoteFormValues {
 
 export type ContactInfoItems = {
   text: string;
-  type: string;
+  type: SocialMediaType;
 };
 
 export interface InputFieldConfig {
@@ -81,7 +90,7 @@ export interface CustomButtonProps {
   id?: string;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   onClick?: () => void;
-  width: string;
+  classes: string;
   icon?: ReactNode;
 }
 

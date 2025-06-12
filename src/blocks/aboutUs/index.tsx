@@ -18,15 +18,15 @@ export const AboutUs = () => {
               <FormattedMessage id="block.aboutUs.container.title.2" />
             </span>
           </h1>
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center my-6">
             <motion.div
               initial={{ x: -100, opacity: 0.5 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="text-left transition-all duration-1000 opacity-100 translate-x-0 px-1">
-              <h3 className="text-xl font-bold text-[#111111] mb-4">
+              {/* <h3 className="text-xl font-bold text-[#111111] mb-4">
                 <FormattedMessage id="block.aboutUs.left.subtitle" />
-              </h3>
+              </h3> */}
               <p className="text-[#333333] mb-6">
                 <FormattedMessage id="block.aboutUs.left.description.1" />
               </p>

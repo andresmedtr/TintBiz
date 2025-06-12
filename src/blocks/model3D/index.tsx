@@ -45,7 +45,7 @@ export const Model3D = () => {
               <TintAccordion />
             </div>
             <CustomButton
-              width="w-full lg:w-fit"
+              classes="w-full lg:w-fit"
               id="block.model3d.square.button"
             />
           </motion.div>
