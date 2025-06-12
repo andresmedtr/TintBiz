@@ -90,7 +90,7 @@ export const QuoteForm = () => {
           </div>
         ))}
         <CustomButton
-          width="w-full"
+          classes="w-full"
           type="submit"
           id="quoteForm.submit.button"
         />
