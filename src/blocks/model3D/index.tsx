@@ -23,24 +23,12 @@ export const Model3D = () => {
           loop
           muted
           playsInline
-          className="absolute top-3 md:top-0 left-0 w-full h-full object-cover z-0">
+          className="absolute top-3 md:top-0 left-0 w-full h-full lg:object-fill object-cover z-0">
           <source src="/bannerVideos/bannerEN.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      {/* <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full h-fit text-center py-[25px] xl:py-[50px]">
-        <h1 className="text-2xl font-bold title-primary md:text-4xl">
-          <FormattedMessage id="block.model3d.title" />
-        </h1>
-        <p className="paragraph-primary">
-          <FormattedMessage id="block.model3d.parapgrah" />
-        </p>
-      </motion.div> */}
-      <div className="w-full h-fit flex justify-center py-[50px] bg-white">
+      <div className="w-full h-fit flex justify-center py-[80px]  bg-white">
         <div className="w-[80%] h-full flex flex-col-reverse items-center justify-between xl:flex-row">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
