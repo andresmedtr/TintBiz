@@ -17,6 +17,8 @@ function ModelViewer({
   const { opacity } = useTint();
   const [loading, setLoading] = useState(true);
 
+  const isCar = src.includes("g_wagon");
+
   useEffect(() => {
     setLoading(true);
     const viewer = modelRef.current;
@@ -79,9 +81,9 @@ function ModelViewer({
         ar={ar}
         class={className}
         disable-zoom
-        camera-orbit="0deg 90deg auto"
-        min-camera-orbit="auto 90deg auto"
-        max-camera-orbit="auto 90deg auto"
+        camera-orbit={!isCar ? "0deg 75deg 250m" : "0deg 75deg 40m"}
+        min-camera-orbit="auto 90deg 25m"
+        max-camera-orbit={!isCar ? "0deg 75deg 400m" : "0deg 75deg 50m"}
       />
     </div>
   );

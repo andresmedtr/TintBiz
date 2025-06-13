@@ -108,11 +108,15 @@ export const serviceOptions = [
 
 export const contactInfo: ContactInfoItems[] = [
   {
-    text: "(555) 123-TINT",
+    text: "(305) 240-9065",
     type: "whatsapp",
   },
   {
-    text: "info@tintpro.com",
+    text: "(954) 676-4480",
+    type: "phone",
+  },
+  {
+    text: "tintsathome.miami@gmail.com",
     type: "email",
   },
   {
@@ -155,4 +159,9 @@ export const footerInfo: FooterType[] = [
   },
 ];
 
-export const socialMedia: SocialMediaType[] = ["whatsapp", "instagram", "email"];
+export const socialMedia: SocialMediaType[] = [
+  "whatsapp",
+  "phone",
+  "instagram",
+  "email",
+];

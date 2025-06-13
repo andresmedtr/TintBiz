@@ -1,4 +1,4 @@
-import { Email, Instagram, WhatsApp } from "@mui/icons-material";
+import { Email, Instagram, Phone, WhatsApp } from "@mui/icons-material";
 import { SocialMediaType, SocialMediaItem } from "@/types/globalTypes";
 
 export const getSocialMediaMap = (): Record<
@@ -7,7 +7,11 @@ export const getSocialMediaMap = (): Record<
 > => ({
   whatsapp: {
     icon: <WhatsApp />,
-    target: "https://wa.me/1234567890",
+    target: "https://wa.me/3052409065",
+  },
+  phone: {
+    icon: <Phone />,
+    target: "+1(954)676-4480",
   },
   instagram: {
     icon: <Instagram />,
@@ -15,6 +19,6 @@ export const getSocialMediaMap = (): Record<
   },
   email: {
     icon: <Email />,
-    target: "tintsathome@fl.com",
+    target: "tintsathome.miami@gmail.com",
   },
 });

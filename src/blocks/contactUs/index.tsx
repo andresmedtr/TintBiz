@@ -43,9 +43,9 @@ export const ContactUs = () => {
                   <a
                     key={idx}
                     href={
-                      contact.target != "tintsathome@fl.com"
-                        ? contact.target
-                        : undefined
+                      item.type == "phone" || item.type == "email"
+                        ? undefined
+                        : contact.target
                     }
                     target="_blank"
                     onClick={() => scrollToView(contact.target)}

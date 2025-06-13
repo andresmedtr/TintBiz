@@ -35,7 +35,7 @@ export default function RootLayout({
           <SwitchProvider>
             <TintProvider>
               <Navbar />
-              <div className="max-w-[3000px] w-full">{children}</div>
+              <div className="max-w-[2000px] w-full">{children}</div>
               <Footer />
             </TintProvider>
           </SwitchProvider>
