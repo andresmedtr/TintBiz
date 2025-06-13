@@ -7,7 +7,7 @@ import { SocialMediaType } from "@/types/globalTypes";
 
 export const SocialMediaButton = ({ type }: { type: SocialMediaType }) => {
   const media = getSocialMediaMap()[type];
-
+  console.log(media);
   if (!media) return null;
 
   return (
@@ -15,7 +15,9 @@ export const SocialMediaButton = ({ type }: { type: SocialMediaType }) => {
       classes="w-1 mx-0.5 flex justify-center"
       type="button"
       icon={media.icon}
-      onClick={() => scrollToView(media.target)}
+      onClick={() => {
+        scrollToView(media.target);
+      }}
     />
   );
 };

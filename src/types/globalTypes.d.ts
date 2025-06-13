@@ -106,11 +106,12 @@ export interface SocialMediaItem {
 
 export interface SocialMediaMap {
   whatsapp: SocialMediaItem;
+  phone: SocialMediaItem;
   instagram: SocialMediaItem;
   email: SocialMediaItem;
 }
 
-export type SocialMediaType = "whatsapp" | "instagram" | "email";
+export type SocialMediaType = "whatsapp" | "phone" | "instagram" | "email";
 
 export interface TintProps {
   children: (props: {

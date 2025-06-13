@@ -5,6 +5,7 @@ import { CustomButton } from "@/components/customButton";
 import ModelViewer from "@/components/modelViewer";
 import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
+import { scrollToView } from "@/utils/scrollToView";
 import { motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
 
@@ -14,9 +15,20 @@ export const Model3D = () => {
 
   return (
     <section
-      className="w-full h-fit flex flex-col justify-center items-center scroll-mt-[70]"
+      className="w-full h-fit flex flex-col justify-center items-center scroll-mt-[70] "
       id="home">
-      <motion.div
+      <div className="relative w-full lg:py-[100px] py-[50px]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-3 md:top-0 left-0 w-full h-full object-cover z-0">
+          <source src="/bannerVideos/bannerEN.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      {/* <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -27,8 +39,8 @@ export const Model3D = () => {
         <p className="paragraph-primary">
           <FormattedMessage id="block.model3d.parapgrah" />
         </p>
-      </motion.div>
-      <div className="bg-white w-full h-fit flex justify-center py-[50px]">
+      </motion.div> */}
+      <div className="w-full h-fit flex justify-center py-[50px] bg-white">
         <div className="w-[80%] h-full flex flex-col-reverse items-center justify-between xl:flex-row">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
@@ -47,6 +59,7 @@ export const Model3D = () => {
             <CustomButton
               classes="w-full lg:w-fit"
               id="block.model3d.square.button"
+              onClick={() => scrollToView("#contact")}
             />
           </motion.div>
           <motion.div
