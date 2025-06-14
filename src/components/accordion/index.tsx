@@ -13,8 +13,7 @@ export const TintAccordion = () => {
           expandIcon={<ExpandMore />}
           aria-controls="panel1-content"
           id="panel1-header"
-          className="cursor-pointer transition-all group"
-        >
+          className="cursor-pointer transition-all group">
           <p className="text-[#111111] font-semibold transition-all group-hover:underline group-hover:decoration-[#E52323]">
             <FormattedMessage id="block.model3d.square.accordion" />
           </p>
@@ -33,21 +32,19 @@ export const TintAccordion = () => {
                 </div>
                 <div
                   className="w-[50px] h-[50px] border border-gray-300 rounded"
-                  style={{ backgroundColor: tone }}
-                ></div>
+                  style={{ backgroundColor: tone }}></div>
               </>
             )}
           </ChooseTInts>
         </AccordionDetails>
       </Accordion>
-      <div className="w-full flex overflow-x-auto lg:hidden px-2 gap-2">
+      <div className="w-full flex overflow-x-auto md:hidden px-2 gap-2">
         <ChooseTInts>
           {({ name, tone }) => (
             <>
               <div
                 className="w-[20px] h-[20px] border border-gray-300 rounded"
-                style={{ backgroundColor: tone }}
-              ></div>
+                style={{ backgroundColor: tone }}></div>
               <div className="flex flex-col">
                 <p className="font-semibold text-[#111111]">
                   <FormattedMessage id={name} />

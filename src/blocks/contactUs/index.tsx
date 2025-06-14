@@ -10,7 +10,7 @@ export const ContactUs = () => {
   const iconsInformation = getSocialMediaMap();
 
   return (
-    <section id="contact" className="py-12 bg-light scroll-mt-[30px] h-fit">
+    <section id="contact" className="py-12 bg-light scroll-mt-[50px] h-fit">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-2xl font-bold md:text-4xl mb-4">
@@ -21,7 +21,7 @@ export const ContactUs = () => {
             <FormattedMessage id="block.contactUs.title.3" />
           </h1>
           <p className="text-lg paragraph-primary">
-            <FormattedMessage id="block.contactUs.paragraph0" />{" "}
+            <FormattedMessage id="block.contactUs.paragraph0" />
             <span className="font-semibold">
               <FormattedMessage id="block.contactUs.paragraph1" />
             </span>
@@ -42,12 +42,6 @@ export const ContactUs = () => {
                 return (
                   <a
                     key={idx}
-                    href={
-                      item.type == "phone" || item.type == "email"
-                        ? undefined
-                        : contact.target
-                    }
-                    target="_blank"
                     onClick={() => scrollToView(contact.target)}
                     className="flex items-center space-x-3 transition-transform duration-300 hover:translate-x-2">
                     <span className="text-[#E52323]">{contact.icon}</span>

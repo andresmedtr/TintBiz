@@ -6,6 +6,7 @@ import {
   ImagesProps,
   FooterType,
   SocialMediaType,
+  LegalTermsProps,
 } from "./types/globalTypes";
 
 export const NavbarFIelds: string[] = [
@@ -128,7 +129,6 @@ export const contactInfo: ContactInfoItems[] = [
 export const businessHours: string[] = [
   "block.contactUs.contactInfo.subtitle.schedule.1",
   "block.contactUs.contactInfo.subtitle.schedule.2",
-  "block.contactUs.contactInfo.subtitle.schedule.3",
 ];
 
 export const footerInfo: FooterType[] = [
@@ -164,4 +164,19 @@ export const socialMedia: SocialMediaType[] = [
   "phone",
   "instagram",
   "email",
+];
+
+export const legalTerms: LegalTermsProps[] = [
+  { title: "legal.1.title", description: "legal.1.description" },
+  { title: "legal.2.title", description: "legal.2.description" },
+  { title: "legal.3.title", description: "legal.3.description" },
+  { title: "legal.4.title", description: "legal.4.description" },
+  { title: "legal.5.title", description: "legal.5.description" },
+  { title: "legal.6.title", description: "legal.6.description" },
+  { title: "legal.7.title", description: "legal.7.description" },
+  { title: "legal.8.title", description: "legal.8.description" },
+  { title: "legal.9.title", description: "legal.9.description" },
+  { title: "legal.10.title", description: "legal.10.description" },
+  { title: "legal.11.title", description: "legal.11.description" },
+  { title: "legal.12.title", description: "legal.12.description" },
 ];

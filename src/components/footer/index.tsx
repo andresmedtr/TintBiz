@@ -3,19 +3,22 @@ import React from "react";
 import Image from "next/image";
 import { footerInfo } from "@/constants";
 import { FormattedMessage } from "react-intl";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
     <footer className="w-full h-auto pt-[20px] bg-[#111111] ">
       <div className="py-10 container text-white grid grid-cols-1 md:grid-cols-4 gap-8 px-5 text-center md:mx-auto lg:text-start">
         <div className="grid-cols-1 mx-auto md:mx-0">
-          <Image
-            src="/logo/logo2.png"
-            width={100}
-            height={100}
-            alt="TintBiz logo Navbar"
-            className="mx-auto md:mx-0"
-          />
+          <Link href="/">
+            <Image
+              src="/logo/logo2.png"
+              width={100}
+              height={100}
+              alt="TintBiz logo Navbar"
+              className="mx-auto md:mx-0"
+            />
+          </Link>
           <p className="text-xs mt-2 max-w-xs">
             <FormattedMessage id="footer.left.description" />
           </p>
@@ -25,11 +28,22 @@ export const Footer = () => {
             <h3 className="text-xl mb-2 text-[#E52323]">
               <FormattedMessage id={footerColumn.title} />
             </h3>
-            {footerColumn.items?.map((item) => (
-              <p className="text-sm" key={item}>
-                <FormattedMessage id={item} />
-              </p>
-            ))}
+            {footerColumn.items?.map((item) => {
+              if (footerColumn.title == "footer.title.2")
+                return (
+                  <Link href="/terms-conditions">
+                    <p className={`text-sm hover:text-[#E52323]`} key={item}>
+                      <FormattedMessage id={item} />
+                    </p>
+                  </Link>
+                );
+              else
+                return (
+                  <p className="text-sm">
+                    <FormattedMessage id={item} />
+                  </p>
+                );
+            })}
           </div>
         ))}
       </div>

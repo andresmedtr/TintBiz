@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { SwitchButton } from "../switchButton";
 import { NavigationButtons } from "../navigation";
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
     <nav className="w-full h-[70px] pt-[20px] bg-[#111111] flex flex-col items-center justify-center shadow-2xl sticky top-0 z-[1] md:pt-0">
       <div className="max-w-[2000px] w-full h-full flex flex-row justify-between px-[15px]">
         <div className="w-fit h-full">
-          <a href="#home">
+          <Link href="/">
             <Image
               src="/logo/logo2.png"
               width={100}
@@ -15,7 +16,7 @@ export const Navbar = () => {
               alt="TintBiz logo Navbar"
               className="w-fit h-full"
             />
-          </a>
+          </Link>
         </div>
         <div className="w-fit h-full flex-row items-center gap-[50px] hidden md:flex">
           <NavigationButtons />

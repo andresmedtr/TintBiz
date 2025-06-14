@@ -9,4 +9,7 @@ export const scrollToView = (target: string) => {
     const element = document.getElementById(target.slice(1));
     element?.scrollIntoView({ behavior: "smooth" });
   } else if (isPhone) window.location.href = `tel:${target}`;
+  else {
+    window.open(target, "_blank");
+  }
 };
