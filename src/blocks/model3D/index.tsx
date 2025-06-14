@@ -6,6 +6,7 @@ import ModelViewer from "@/components/modelViewer";
 import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
 import { scrollToView } from "@/utils/scrollToView";
+import { KeyboardDoubleArrowDown } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
 
@@ -39,9 +40,6 @@ export const Model3D = () => {
               <FormattedMessage id="block.model3d.square.title" />
             </h1>
             <div className="h-fit w-[100%] flex flex-col gap-[30px] text-sm xl:text-lg">
-              <p className="">
-                <FormattedMessage id="block.model3d.square.paragrah" />
-              </p>
               <TintAccordion />
             </div>
             <CustomButton
