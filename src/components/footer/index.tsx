@@ -28,10 +28,10 @@ export const Footer = () => {
             <h3 className="text-xl mb-2 text-[#E52323]">
               <FormattedMessage id={footerColumn.title} />
             </h3>
-            {footerColumn.items?.map((item) => {
+            {footerColumn.items?.map((item, idx) => {
               if (footerColumn.title == "footer.title.2")
                 return (
-                  <Link href="/terms-conditions">
+                  <Link href="/terms-conditions" key={idx}>
                     <p className={`text-sm hover:text-[#E52323]`} key={item}>
                       <FormattedMessage id={item} />
                     </p>
@@ -39,7 +39,7 @@ export const Footer = () => {
                 );
               else
                 return (
-                  <p className="text-sm">
+                  <p className="text-sm" key={idx}>
                     <FormattedMessage id={item} />
                   </p>
                 );
