@@ -6,7 +6,6 @@ import ModelViewer from "@/components/modelViewer";
 import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
 import { scrollToView } from "@/utils/scrollToView";
-import { KeyboardDoubleArrowDown } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
 
