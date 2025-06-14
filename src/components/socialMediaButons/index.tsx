@@ -7,7 +7,6 @@ import { SocialMediaType } from "@/types/globalTypes";
 
 export const SocialMediaButton = ({ type }: { type: SocialMediaType }) => {
   const media = getSocialMediaMap()[type];
-  console.log(media);
   if (!media) return null;
 
   return (

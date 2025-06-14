@@ -120,3 +120,8 @@ export interface TintProps {
     tone: string;
   }) => ReactNode;
 }
+
+export interface LegalTermsProps {
+  title: string;
+  description: string;
+}
