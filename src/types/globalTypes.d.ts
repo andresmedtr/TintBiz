@@ -92,11 +92,17 @@ export interface CustomButtonProps {
   onClick?: () => void;
   classes: string;
   icon?: ReactNode;
+  disabled?: boolean;
+}
+
+export interface FooterItem {
+  text: string;
+  target?: string;
 }
 
 export interface FooterType {
   title: string;
-  items?: string[];
+  items?: FooterItem[];
 }
 
 export interface SocialMediaItem {

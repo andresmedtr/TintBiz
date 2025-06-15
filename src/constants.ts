@@ -135,26 +135,35 @@ export const footerInfo: FooterType[] = [
   {
     title: "footer.title.1",
     items: [
-      "footer.title.1.description.1",
-      "footer.title.1.description.2",
-      "footer.title.1.description.3",
-      "footer.title.1.description.4",
+      { text: "footer.title.1.description.1" },
+      { text: "footer.title.1.description.2" },
+      { text: "footer.title.1.description.3" },
+      { text: "footer.title.1.description.4" },
     ],
   },
   {
     title: "footer.title.2",
     items: [
-      "footer.title.2.description.1",
-      "footer.title.2.description.2",
-      "footer.title.2.description.3",
+      { text: "footer.title.2.description.1", target: "/terms-conditions" },
+      { text: "footer.title.2.description.2", target: "/refund-policy" },
+      { text: "footer.title.2.description.3", target: "/terms-conditions" },
     ],
   },
   {
     title: "footer.title.3",
     items: [
-      "footer.title.3.description.1",
-      "footer.title.3.description.2",
-      "footer.title.3.description.3",
+      {
+        text: "footer.title.3.description.1",
+        target: "https://wa.me/3052409065",
+      },
+      {
+        text: "footer.title.3.description.2",
+        target: "https://www.instagram.com/tintsathomefl/",
+      },
+      {
+        text: "footer.title.3.description.3",
+        target: "https://www.instagram.com/tintsathomefl/",
+      },
     ],
   },
 ];
@@ -179,4 +188,12 @@ export const legalTerms: LegalTermsProps[] = [
   { title: "legal.10.title", description: "legal.10.description" },
   { title: "legal.11.title", description: "legal.11.description" },
   { title: "legal.12.title", description: "legal.12.description" },
+];
+
+export const refundTerms: LegalTermsProps[] = [
+  { title: "refund.1.title", description: "refund.1.description" },
+  { title: "refund.2.title", description: "refund.2.description" },
+  { title: "refund.3.title", description: "refund.3.description" },
+  { title: "refund.4.title", description: "refund.4.description" },
+  { title: "refund.5.title", description: "refund.5.description" },
 ];

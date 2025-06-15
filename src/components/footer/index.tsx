@@ -23,26 +23,25 @@ export const Footer = () => {
             <FormattedMessage id="footer.left.description" />
           </p>
         </div>
-        {footerInfo.map((footerColumn) => (
-          <div className="pt-6 " key={footerColumn.title}>
+        {footerInfo.map((footerColumn, index) => (
+          <div className="pt-6 " key={index}>
             <h3 className="text-xl mb-2 text-[#E52323]">
               <FormattedMessage id={footerColumn.title} />
             </h3>
             {footerColumn.items?.map((item, idx) => {
-              if (footerColumn.title == "footer.title.2")
-                return (
-                  <Link href="/terms-conditions" key={idx}>
-                    <p className={`text-sm hover:text-[#E52323]`} key={item}>
-                      <FormattedMessage id={item} />
-                    </p>
-                  </Link>
-                );
-              else
+              if (!item.target)
                 return (
                   <p className="text-sm" key={idx}>
-                    <FormattedMessage id={item} />
+                    <FormattedMessage id={item.text} />
                   </p>
                 );
+              return (
+                <Link href={`${item.target}`} key={idx}>
+                  <p className={`text-sm hover:text-[#E52323]`}>
+                    <FormattedMessage id={item.text} />
+                  </p>
+                </Link>
+              );
             })}
           </div>
         ))}

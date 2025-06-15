@@ -59,6 +59,8 @@
   "quoteForm.service.residential": "Residential Tinting",
   "quoteForm.service.commercial": "Commercial Tinting",
   "quoteForm.submit.button": "Send Quote Request",
+  "quoteForm.submit.button.success": "Thanks! We'll reach out soon",
+  "quoteForm.submit.button.loading": "Sending...",
   "footer.left.description": "Professional window tinting services for automotive and residential applications.",
   "footer.title.1": "Services",
   "footer.title.1.description.1": "Residential Tinting",
@@ -101,5 +103,15 @@
   "legal.11.description": "For questions regarding these terms, your privacy, or SMS usage, you may contact us: Email: support@tintsathome.com, Phone: (123) 456-7890, Mailing Address: 1234 Tint Ave, Miami, FL.",
   "legal.12.title": "Summary",
   "legal.12.description": "By submitting your phone number, you agree to receive automated and non-automated calls and SMS messages from Tints At Home regarding services and offers. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for help. Your consent will not be shared with third parties.",
-  "legal.button": "Go back to Home Page"
+  "legal.button": "Go back to Home Page",
+  "refund.1.title": "Refund Policy @ Tints At Home",
+  "refund.1.description": "At Tints At Home, our priority is to ensure your satisfaction with every window tint installation, whether for vehicles or residences. Below is our refund policy:",
+  "refund.2.title": "Valid Refund Requests",
+  "refund.2.description": "Refund requests will be accepted only in the following cases: The service was not performed due to reasons attributable to our team, the client canceled at least 24 hours before the scheduled appointment or there was a verifiable error in the shade or type of film installed that differed from what was requested.",
+  "refund.3.title": "Refunds Do Not Apply If:",
+  "refund.3.description": "The client was not available at the agreed time and place (no show). The service was carried out as agreed, but the client changed their mind after installation. There was pre-existing damage to the glass that affected the installation and was not reported before the service. The cancellation was within 24 hours of the scheduled appointment.",
+  "refund.4.title": "Refund Method",
+  "refund.4.description": "Approved refunds will be processed using the same payment method used for the purchase. Refunds may take 5 to 10 business days depending on the bank or payment provider.",
+  "refund.5.title": "How to Request It",
+  "refund.5.description": "Email us at Tintsathome.miami@gmail.com or call 954-676-4480 with your full name, order or appointment number, and the reason for your request."
 }
