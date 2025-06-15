@@ -94,9 +94,14 @@ export interface CustomButtonProps {
   icon?: ReactNode;
 }
 
+export interface FooterItem {
+  text: string;
+  target?: string;
+}
+
 export interface FooterType {
   title: string;
-  items?: string[];
+  items?: FooterItem[];
 }
 
 export interface SocialMediaItem {

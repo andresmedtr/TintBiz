@@ -101,5 +101,15 @@
   "legal.11.description": "Para preguntas sobre estos términos, su privacidad o el uso de SMS, puede contactarnos: Correo: support@tintsathome.com, Teléfono: (123) 456-7890, Dirección: 1234 Tint Ave, Miami, FL.",
   "legal.12.title": "Resumen",
   "legal.12.description": "Al enviar su número de teléfono, usted acepta recibir llamadas y mensajes SMS automáticos y no automáticos de Tints At Home sobre servicios y ofertas. La frecuencia de los mensajes puede variar. Pueden aplicarse tarifas por datos y mensajes. Responda STOP para cancelar o HELP para obtener ayuda. Su consentimiento no será compartido con terceros.",
-  "legal.button": "Vuelve a la Pagina Principal"
+  "legal.button": "Vuelve a la Pagina Principal",
+  "refund.1.title": "Política de Reembolso para Tints At Home",
+  "refund.1.description": "En Tints At Home, nuestra prioridad es garantizar tu satisfacción con cada instalación de papel ahumado, ya sea en autos o residencias. A continuación, detallamos nuestra política de reembolsos:",
+  "refund.2.title": "Solicitudes de Reembolso Válidas",
+  "refund.2.description": "Se aceptarán solicitudes de reembolso únicamente en los siguientes casos: El servicio no se realizó por causas atribuibles a nuestro equipo. El cliente canceló con al menos 24 horas de anticipación a la cita programada. Hubo un error comprobable en la tonalidad o tipo de papel instalado, diferente al solicitado.",
+  "refund.3.title": "No aplica reembolso si:",
+  "refund.3.description": "El cliente no se encontraba disponible en la hora y lugar acordado (no show). El servicio fue realizado según lo acordado, pero el cliente cambió de opinión luego de la instalación. Hubo daños previos en el vidrio que afectaron la instalación y no fueron informados antes del servicio. La cancelación fue dentro de las 24 horas previas a la cita programada.",
+  "refund.4.title": "Método de reembolso",
+  "refund.4.description": "Los reembolsos aprobados se procesarán en el mismo método de pago utilizado en la compra. El reembolso puede tardar entre 5 a 10 días hábiles dependiendo de la entidad bancaria.",
+  "refund.5.title": "¿Cómo solicitarlo?",
+  "refund.5.description": "Escríbenos al correo Tintsathome.miami@gmail.com o llama al 954-676-4480 con tu nombre completo, número de orden o cita, y el motivo de tu solicitud."
 }

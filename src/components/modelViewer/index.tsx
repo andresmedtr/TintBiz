@@ -82,8 +82,8 @@ function ModelViewer({
         class={className}
         disable-zoom
         camera-orbit={!isCar ? "0deg 90deg 250m" : "0deg 90deg 40m"}
-        min-camera-orbit="-180deg 90deg 25m"
-        max-camera-orbit={!isCar ? "180deg 90deg 400m" : "180deg 90deg 50m"}
+        min-camera-orbit="auto 90deg 25m"
+        max-camera-orbit={!isCar ? "auto 90deg 250m" : "auto 90deg 50m"}
       />
     </div>
   );
