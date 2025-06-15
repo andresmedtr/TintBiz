@@ -19,7 +19,6 @@ export const QuoteForm = () => {
   });
   const [submitResult, setSubmitResult] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
 
   // State handlers
   const handleChange = (
