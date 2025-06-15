@@ -59,6 +59,8 @@
   "quoteForm.service.residential": "Residential Tinting",
   "quoteForm.service.commercial": "Commercial Tinting",
   "quoteForm.submit.button": "Send Quote Request",
+  "quoteForm.submit.button.success": "Thanks! We'll reach out soon",
+  "quoteForm.submit.button.loading": "Sending...",
   "footer.left.description": "Professional window tinting services for automotive and residential applications.",
   "footer.title.1": "Services",
   "footer.title.1.description.1": "Residential Tinting",

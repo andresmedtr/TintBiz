@@ -17,26 +17,47 @@ export const QuoteForm = () => {
     service: "Automotive Tinting",
     message: "",
   });
+  const [submitResult, setSubmitResult] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
 
   // State handlers
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    console.log(form.firstName);
   };
 
   // Submit form through emailJs
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
-    sendEmail(form);
+    setIsLoading(true);
+    try {
+      await sendEmail(form);
+      setSubmitResult(true);
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "Automotive Tinting",
+        message: "",
+      });
+      setTimeout(() => {
+        setSubmitResult(false);
+      }, 20000);
+    } catch (error) {
+      console.error(error);
+      setSubmitResult(false);
+      setIsLoading(false);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 md:w-fit">
       <h3 className="text-xl font-bold title-primary mb-1">
-        {" "}
         <FormattedMessage id="quoteForm.title" />
       </h3>
       <p className="text-sm paragraph-primary mb-6">
@@ -90,9 +111,16 @@ export const QuoteForm = () => {
           </div>
         ))}
         <CustomButton
-          classes="w-full"
+          classes={`w-full ${submitResult ? "bg-green-400" : ""}`}
           type="submit"
-          id="quoteForm.submit.button"
+          id={
+            submitResult
+              ? "quoteForm.submit.button.success"
+              : isLoading
+              ? "quoteForm.submit.button.loading"
+              : "quoteForm.submit.button"
+          }
+          disabled={submitResult}
         />
       </form>
     </div>

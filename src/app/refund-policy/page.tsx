@@ -1,6 +1,6 @@
 "use client";
 
-import { legalTerms, refundTerms } from "@/constants";
+import { refundTerms } from "@/constants";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import Link from "next/link";
