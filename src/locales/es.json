@@ -59,6 +59,8 @@
   "quoteForm.service.residential": "Polarizado Residencial",
   "quoteForm.service.commercial": "Polarizado Comercial",
   "quoteForm.submit.button": "Enviar Solicitud",
+  "quoteForm.submit.button.success": "Gracias! Te contactaremos pronto",
+  "quoteForm.submit.button.loading": "Enviando...",
   "footer.left.description": "Professional window tinting services for automotive and residential applications.",
   "footer.title.1": "Servicios",
   "footer.title.1.description.1": "Residential Tinting",
