@@ -7,19 +7,47 @@ import { SwitchProvider } from "@/provider/switch";
 import { TintProvider } from "@/provider/tint";
 import { Footer } from "@/components/footer";
 
+export const viewport = {
+  themeColor: "#E52323",
+};
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   display: "swap",
 });
 
+// export const metadata: Metadata = {
+//   title: "TintsAtHome",
+//   description: "Tints to the comfortness of your home",
+//   authors: [
+//     { name: "Rodrigo Celis", url: "https://github.com/Congrak" },
+//     { name: "Andres Medina", url: "https://github.com/andresmedtr" },
+//   ],
+// };
+
 export const metadata: Metadata = {
-  title: "TintsAtHome",
+  title: "Tints At Home",
   description: "Tints to the comfortness of your home",
   authors: [
     { name: "Rodrigo Celis", url: "https://github.com/Congrak" },
     { name: "Andres Medina", url: "https://github.com/andresmedtr" },
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", sizes: "32x32", type: "image/svg" },
+      { url: "/favicon.svg", sizes: "16x16", type: "image/svg" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/manifest.json",
+  other: {
+    "msapplication-TileColor": "#E52323",
+    "msapplication-config": "/browserconfig.xml",
+    "mask-icon": "/safari-pinned-tab.svg",
+  },
 };
 
 export default function RootLayout({
