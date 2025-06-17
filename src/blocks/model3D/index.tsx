@@ -7,11 +7,16 @@ import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
 import { scrollToView } from "@/utils/scrollToView";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
 export const Model3D = () => {
   const { isActive } = useSwitch();
   const { tintName } = useTint();
+  const locale =
+    typeof window !== "undefined" && navigator.language.startsWith("es")
+      ? "es"
+      : "en";
 
   return (
     <section
@@ -24,7 +29,14 @@ export const Model3D = () => {
           muted
           playsInline
           className="absolute top-3 md:top-0 left-0 w-full h-full lg:object-fill object-cover z-0">
-          <source src="/bannerVideos/bannerEN.mp4" type="video/mp4" />
+          <source
+            src={
+              locale == "en"
+                ? "/bannerVideos/bannerEN.mp4"
+                : "/bannerVideos/bannerES.mp4"
+            }
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
