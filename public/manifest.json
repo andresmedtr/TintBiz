@@ -1,0 +1,25 @@
+{
+  "name": "Tints At Home - Window Tinting Experts",
+  "short_name": "Tints@home",
+  "description": "Professional window tinting services from cars to buildings. Improve comfort, reduce glare, and protect your interiors.",
+  "lang": "en-US",
+  "start_url": "/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#E52323",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
