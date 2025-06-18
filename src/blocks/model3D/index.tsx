@@ -7,7 +7,6 @@ import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
 import { scrollToView } from "@/utils/scrollToView";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
 export const Model3D = () => {
