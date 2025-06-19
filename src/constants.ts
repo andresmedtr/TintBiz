@@ -197,3 +197,17 @@ export const refundTerms: LegalTermsProps[] = [
   { title: "refund.4.title", description: "refund.4.description" },
   { title: "refund.5.title", description: "refund.5.description" },
 ];
+
+export const carBenefits: string[] = [
+  "block.benefits.card.car.1",
+  "block.benefits.card.car.2",
+  "block.benefits.card.car.3",
+  "block.benefits.card.car.4",
+];
+
+export const houseBenefits: string[] = [
+  "block.benefits.card.house.1",
+  "block.benefits.card.house.2",
+  "block.benefits.card.house.3",
+  "block.benefits.card.house.4",
+];

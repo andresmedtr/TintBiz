@@ -36,17 +36,16 @@ export const Model3D = () => {
             }
             type="video/mp4"
           />
-          Your browser does not support the video tag.
         </video>
       </div>
       <div className="w-full h-fit flex justify-center py-[80px]  bg-white">
-        <div className="w-[90%] h-full flex flex-col-reverse items-center justify-between xl:flex-row">
+        <div className="w-[90%] h-full flex flex-col-reverse gap-[40px] items-center justify-between xl:flex-row">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="w-full h-full flex flex-col gap-[20px]">
-            <h1 className="text-2xl font-bold xl:text-5xl">
+            <h1 className="text-2xl font-bold text-center xl:text-5xl">
               <FormattedMessage id="block.model3d.square.title" />
             </h1>
             <div className="h-fit w-[100%] flex flex-col gap-[30px] text-sm xl:text-lg">

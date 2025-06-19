@@ -1,11 +1,33 @@
 "use client";
 
 import { NavbarFIelds } from "@/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 export const NavigationButtons = () => {
   const [activeTab, setActiveTab] = useState<string>(NavbarFIelds[0]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = NavbarFIelds[0];
+      NavbarFIelds.forEach((title) => {
+        const anchor = title.split(".")[2].toLowerCase();
+        const section = document.getElementById(anchor);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = title;
+          }
+        }
+      });
+      setActiveTab(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
