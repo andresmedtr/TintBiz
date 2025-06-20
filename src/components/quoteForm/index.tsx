@@ -4,7 +4,7 @@ import { useState } from "react";
 import { sendEmail } from "@/service/emailjs";
 import { QuoteFormValues } from "@/types/globalTypes";
 import { FormattedMessage } from "react-intl";
-import { inputFields, tintingServiceOptions } from "@/constants";
+import { inputFields } from "@/constants";
 import { CustomButton } from "../customButton";
 
 export const QuoteForm = () => {

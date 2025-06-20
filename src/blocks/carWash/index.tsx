@@ -12,8 +12,12 @@ export const CarWash = () => {
     <section id="carwash" className="py-10 carwash-section bg-top text-white">
       <div className="text-center ">
         <h1 className="text-xl font-bold md:text-4xl mb-4 pt-10">
-          Premium
-          <span className="text-[#E52323]"> Auto Detailing</span> Services
+          <FormattedMessage id="block.carwash.title.1" />
+          <span className="text-[#E52323]">
+            {" "}
+            <FormattedMessage id="block.carwash.title.2" />
+          </span>{" "}
+          <FormattedMessage id="block.carwash.title.3" />
         </h1>
       </div>
       <div className="grid md:grid-cols-3 gap-15 py-10">
