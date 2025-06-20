@@ -27,7 +27,7 @@ const montserrat = Montserrat({
 // };
 
 export const metadata: Metadata = {
-  title: "Tints At Home",
+  title: "Tints at Home | Window Tinting Experts",
   description: "Tints to the comfortness of your home",
   authors: [
     { name: "Rodrigo Celis", url: "https://github.com/Congrak" },
