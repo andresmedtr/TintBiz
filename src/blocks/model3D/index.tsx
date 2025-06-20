@@ -27,7 +27,7 @@ export const Model3D = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 w-full h-full md:object-fill z-0">
+          className="absolute top-0 w-full h-full md:object-fill object-cover z-0">
           <source
             src={
               locale == "en"
