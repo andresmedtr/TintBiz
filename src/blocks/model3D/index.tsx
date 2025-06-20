@@ -61,7 +61,8 @@ export const Model3D = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}>
-            <div className="relative bg-[#F2F2F2] h-[400px] rounded-lg overflow-hidden flex items-center lg:h-[500px]">
+            {/* shadow-[0_8px_24px_rgba(0,0,0,0.8)] */}
+            <div className="relative bg-[#F2F2F2] h-[400px] rounded-lg overflow-hidden flex items-center lg:h-[500px] shadow-xl">
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
                 <p className="text-sm font-semibold text-[#111111]">
                   <FormattedMessage id={tintName} />

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ModelViewerProps {
   src: string;
   alt?: string;
@@ -46,7 +48,8 @@ export interface QuoteFormValues {
   lastName: string;
   email: string;
   phone: string;
-  service: string;
+  tintingService: string;
+  detailingService: string;
   message: string;
 }
 
@@ -60,6 +63,7 @@ export interface InputFieldConfig {
   label: string;
   multiline?: boolean;
   type?: string;
+  options?: { value: string; labelId: string }[];
 }
 
 export interface TintContextType {
@@ -130,4 +134,10 @@ export interface TintProps {
 export interface LegalTermsProps {
   title: string;
   description: string;
+}
+
+export interface CarWashContent {
+  title: string;
+  description: string;
+  icon: ReactNode;
 }

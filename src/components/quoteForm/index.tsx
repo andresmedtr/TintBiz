@@ -4,7 +4,7 @@ import { useState } from "react";
 import { sendEmail } from "@/service/emailjs";
 import { QuoteFormValues } from "@/types/globalTypes";
 import { FormattedMessage } from "react-intl";
-import { inputFields, serviceOptions } from "@/constants";
+import { inputFields, tintingServiceOptions } from "@/constants";
 import { CustomButton } from "../customButton";
 
 export const QuoteForm = () => {
@@ -14,7 +14,8 @@ export const QuoteForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    service: "Automotive Tinting",
+    tintingService: "Automotive Tinting",
+    detailingService: "---",
     message: "",
   });
   const [submitResult, setSubmitResult] = useState<boolean>(false);
@@ -39,7 +40,8 @@ export const QuoteForm = () => {
         lastName: "",
         email: "",
         phone: "",
-        service: "Automotive Tinting",
+        tintingService: "Automotive Tinting",
+        detailingService: "---",
         message: "",
       });
       setTimeout(() => {
@@ -72,16 +74,16 @@ export const QuoteForm = () => {
               <FormattedMessage id={field.label} />
             </label>
 
-            {field.id === "service" ? (
+            {field.options ? (
               <select
                 id={field.id}
                 name={field.id}
-                value={form.service}
+                value={form[field.id]}
                 onChange={(e) =>
                   setForm((prev) => ({ ...prev, [field.id]: e.target.value }))
                 }
                 className="w-full p-2 border border-gray-300 rounded-md">
-                {serviceOptions.map((option) => (
+                {field.options?.map((option) => (
                   <option key={option.value} value={option.value}>
                     <FormattedMessage id={option.labelId} />
                   </option>
