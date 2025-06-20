@@ -129,7 +129,7 @@ export const inputFields: InputFieldConfig[] = [
   { id: "phone", label: "quoteForm.fields.phone", type: "tel" },
   {
     id: "tintingService",
-    label: "quoteForm.fields.serviceType",
+    label: "quoteForm.fields.tintingServiceType",
     options: tintingServiceOptions,
   },
   {
