@@ -18,9 +18,9 @@ export const sendEmail = async (data: QuoteFormValues) => {
   };
 
   return emailjs.send(
-    "service_k0rtwpt",
-    "template_vq0kb6v",
+    process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+    process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
     templateParams,
-    "nNDoDIArBqtTx2U9Y"
+    process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
   );
 };

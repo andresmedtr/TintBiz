@@ -21,13 +21,13 @@ export const Model3D = () => {
     <section
       className="w-full h-fit flex flex-col justify-center items-center scroll-mt-[70] "
       id="home">
-      <div className="relative w-full lg:py-[100px] py-[50px]">
+      <div className="relative w-full top-4 md:top-0 lg:py-[105px] py-[35px]">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-3 md:top-0 left-0 w-full h-full lg:object-fill object-cover z-0">
+          className="absolute top-0 w-full h-full md:object-fill z-0">
           <source
             src={
               locale == "en"

@@ -14,9 +14,8 @@ export const CarWash = () => {
         <h1 className="text-xl font-bold md:text-4xl mb-4 pt-10">
           <FormattedMessage id="block.carwash.title.1" />
           <span className="text-[#E52323]">
-            {" "}
             <FormattedMessage id="block.carwash.title.2" />
-          </span>{" "}
+          </span>
           <FormattedMessage id="block.carwash.title.3" />
         </h1>
       </div>
